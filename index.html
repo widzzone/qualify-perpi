@@ -38,7 +38,7 @@
       <div class="w-14 h-14 border-4 border-blue-100 rounded-full"></div>
       <div class="w-14 h-14 border-4 border-blue-700 rounded-full border-t-transparent animate-spin absolute top-0 left-0"></div>
     </div>
-    <p class="mt-6 text-blue-900 font-bold tracking-widest text-xs uppercase animate-pulse">Memuat Qualify...</p>
+    <p class="mt-6 text-blue-900 font-bold tracking-widest text-xs uppercase animate-pulse">Memuat Data Qualify...</p>
   </div>
 
   <div id="mobile-overlay" onclick="closeMobileMenu()" class="fixed inset-0 bg-slate-900/50 z-[105] hidden lg:hidden transition-opacity opacity-0 duration-300"></div>
@@ -52,10 +52,10 @@
       </div>
       <nav class="flex-1 mt-2 space-y-2 px-4">
         <a href="#" onclick="showPage('dashboard')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors sidebar-active" id="nav-dashboard">
-          <i class="fa fa-chart-pie w-6 text-center mr-3 text-lg"></i> Tentang Qualify
+          <i class="fa fa-chart-pie w-6 text-center mr-3 text-lg"></i> Ringkasan & Tentang
         </a>
         <a href="#" onclick="showPage('tutorials')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors" id="nav-tutorials">
-          <i class="fa fa-book-open w-6 text-center mr-3 text-lg"></i> Panduan Teknis
+          <i class="fa fa-book-open w-6 text-center mr-3 text-lg"></i> Panduan Teknis (SOP)
         </a>
       </nav>
       <div class="p-6 text-center border-t border-slate-100 bg-slate-50/50">
@@ -70,7 +70,7 @@
           <button onclick="openMobileMenu()" class="lg:hidden text-slate-600 hover:text-blue-600 text-xl p-2 rounded-lg focus:outline-none">
             <i class="fa fa-bars"></i>
           </button>
-          <h1 id="page-title" class="text-sm sm:text-lg md:text-xl font-bold text-slate-800 tracking-tight uppercase truncate max-w-[140px] sm:max-w-none">Tentang Qualify</h1>
+          <h1 id="page-title" class="text-sm sm:text-lg md:text-xl font-bold text-slate-800 tracking-tight uppercase truncate max-w-[140px] sm:max-w-none">Ringkasan & Tentang</h1>
         </div>
         <a href="https://qualifynew.perpi.id/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold py-2 sm:py-2.5 px-4 sm:px-6 rounded-lg shadow transition-all flex items-center">
           <i class="fa fa-external-link-alt mr-1.5 sm:mr-2 text-xs"></i> <span class="hidden sm:inline">Login ke Qualify</span><span class="sm:hidden">Login</span>
@@ -159,7 +159,7 @@
           <div class="bg-white p-4 sm:p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm">
             <h2 class="text-xl sm:text-2xl font-extrabold text-[#0f172a] tracking-tight mb-6 sm:mb-8">QUALIFY KNOWLEDGE HUB: PANDUAN PENGGUNAAN TERPADU</h2>
             
-            <div class="flex overflow-x-auto gap-2 sm:gap-3 pb-4 mb-6 border-b border-slate-200 hide-scrollbar scroll-smooth">
+            <div class="flex overflow-x-auto gap-2 sm:gap-3 pb-4 mb-4 border-b border-slate-200 hide-scrollbar scroll-smooth">
                 <button onclick="switchVideo('v1', this, '1. Panduan Ringkas Penggunaan Aplikasi QUALIFY')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-blue-600 text-white shadow-md border border-blue-600 video-tab-btn">1. Panduan Ringkas & Flowchart</button>
                 <button onclick="switchVideo('v2', this, '2. Panduan Cara Login & Edit Profil/Password')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">2. Login & Profil</button>
                 <button onclick="switchVideo('v3', this, '3. Panduan Menambah Member/Company Baru')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">3. Create Member</button>
@@ -169,6 +169,11 @@
                 <button onclick="switchVideo('v7', this, '7. Panduan Cara Input Form Respondent')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">7. Single Submit</button>
                 <button onclick="switchVideo('v8', this, '8. Panduan Cara Submit Multiple Responden')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">8. Multiple Submit</button>
                 <button onclick="switchVideo('v9', this, '9. Panduan Cara Menangani Error Saat Upload File')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-red-50 text-red-600 hover:bg-red-100 hover:text-red-700 border border-red-200 video-tab-btn">9. Error Handling</button>
+            </div>
+
+            <div id="video-top-description" class="text-sm text-slate-700 mb-4 bg-slate-50 p-3 sm:p-4 rounded-xl border border-slate-200 flex items-start max-w-4xl mx-auto transition-all duration-300">
+               <i class="fa fa-info-circle mr-2 mt-0.5 text-blue-600 shrink-0"></i>
+               <span id="video-desc-text" class="leading-relaxed">Video ini memberikan gambaran singkat mengenai alur kerja dan flowchart penggunaan aplikasi QUALIFY secara keseluruhan.</span>
             </div>
 
             <div class="bg-slate-900 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-video relative flex items-center justify-center w-full max-w-4xl mx-auto mb-6 sm:mb-10">
@@ -671,11 +676,36 @@
         'v9': 'https://drive.google.com/file/d/1498tn4T2x0--qd68UPQKI2KwLjvUJ87_/preview'
       };
 
+      // DESKRIPSI DINAMIS UNTUK SETIAP VIDEO
+      const videoDescMap = {
+        'v1': 'Video ini memberikan gambaran singkat mengenai alur kerja dan flowchart penggunaan aplikasi QUALIFY secara keseluruhan.',
+        'v2': 'Panduan mengenai tata cara masuk ke dalam sistem dan melakukan perubahan pada profil atau kata sandi Anda.',
+        'v3': 'Panduan khusus bagi <b>PERPI Admin</b> untuk mendaftarkan perusahaan atau member baru ke dalam sistem.',
+        'v4': 'Panduan bagi <b>PERPI Admin</b> untuk membuat dan mengelola akun dengan hak akses QC Manager.',
+        'v5': 'Panduan bagi <b>PERPI Admin</b> untuk mendaftarkan akun pengurus PERPI (PERPI Officer).',
+        'v6': 'Panduan bagi <b>QC Manager</b> untuk membuat dan mengelola akun tim Quality Control (QC Officer) di perusahaannya.',
+        'v7': 'Berikut ini panduan cara input single (satu) responden di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
+        'v8': 'Panduan cara mengunggah data puluhan hingga ratusan responden sekaligus menggunakan template Excel massal.',
+        'v9': 'Penjelasan dan solusi untuk mengatasi berbagai kendala atau error yang sering muncul saat proses unggah file.'
+      };
+
       if (loader) loader.style.display = 'flex';
       if(player) player.src = videoMap[videoId];
       
       const titleDisplay = document.getElementById('video-title-display');
       if (titleDisplay && videoTitle) titleDisplay.innerText = videoTitle;
+
+      // UPDATE TEKS DESKRIPSI DINAMIS
+      const descBox = document.getElementById('video-top-description');
+      const descText = document.getElementById('video-desc-text');
+      if (descBox && descText) {
+         if (videoDescMap[videoId]) {
+            descText.innerHTML = videoDescMap[videoId];
+            descBox.style.display = 'flex';
+         } else {
+            descBox.style.display = 'none';
+         }
+      }
 
       buttons.forEach(btn => {
         btn.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn";
@@ -700,7 +730,7 @@
 
     function showPage(pageId) {
       const pages = ['dashboard', 'tutorials'];
-      const titles = { 'dashboard': 'Tentang Qualify', 'tutorials': 'Panduan Teknis (SOP)' };
+      const titles = { 'dashboard': 'Ringkasan & Tentang', 'tutorials': 'Panduan Teknis (SOP)' };
       const pageTitle = document.getElementById('page-title');
       if(pageTitle) pageTitle.innerText = titles[pageId];
 
