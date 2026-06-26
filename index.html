@@ -52,7 +52,7 @@
       </div>
       <nav class="flex-1 mt-2 space-y-2 px-4">
         <a href="#" onclick="showPage('dashboard')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors sidebar-active" id="nav-dashboard">
-          <i class="fa fa-chart-pie w-6 text-center mr-3 text-lg"></i> Ringkasan & Tentang
+          <i class="fa fa-chart-pie w-6 text-center mr-3 text-lg"></i> Tentang Qualify
         </a>
         <a href="#" onclick="showPage('tutorials')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors" id="nav-tutorials">
           <i class="fa fa-book-open w-6 text-center mr-3 text-lg"></i> Panduan Teknis (SOP)
@@ -70,7 +70,7 @@
           <button onclick="openMobileMenu()" class="lg:hidden text-slate-600 hover:text-blue-600 text-xl p-2 rounded-lg focus:outline-none">
             <i class="fa fa-bars"></i>
           </button>
-          <h1 id="page-title" class="text-sm sm:text-lg md:text-xl font-bold text-slate-800 tracking-tight uppercase truncate max-w-[140px] sm:max-w-none">Ringkasan & Tentang</h1>
+          <h1 id="page-title" class="text-sm sm:text-lg md:text-xl font-bold text-slate-800 tracking-tight uppercase truncate max-w-[140px] sm:max-w-none">Tentang Qualify</h1>
         </div>
         <a href="https://qualifynew.perpi.id/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold py-2 sm:py-2.5 px-4 sm:px-6 rounded-lg shadow transition-all flex items-center">
           <i class="fa fa-external-link-alt mr-1.5 sm:mr-2 text-xs"></i> <span class="hidden sm:inline">Login ke Qualify</span><span class="sm:hidden">Login</span>
@@ -612,7 +612,7 @@
 
   <script>
     // MASUKKAN URL WEB APP GOOGLE SCRIPT BAPAK DI SINI
-    const GAS_API_URL = 'https://script.google.com/macros/s/GANTI_DENGAN_ID_BAPAK/exec'; 
+    const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbwA1B5FDKhDvFequxq3OiBHoIxkx4F63MJMqDMGc1A_Yk_i6Q3-hRrTL7Oln8KjU49N/exec'; 
 
     document.addEventListener("DOMContentLoaded", () => { initAppEngine(); });
 
@@ -700,7 +700,7 @@
 
     function showPage(pageId) {
       const pages = ['dashboard', 'tutorials'];
-      const titles = { 'dashboard': 'Ringkasan & Tentang', 'tutorials': 'Panduan Teknis (SOP)' };
+      const titles = { 'dashboard': 'Tentang Qualify', 'tutorials': 'Panduan Teknis (SOP)' };
       const pageTitle = document.getElementById('page-title');
       if(pageTitle) pageTitle.innerText = titles[pageId];
 
