@@ -55,7 +55,7 @@
           <i class="fa fa-chart-pie w-6 text-center mr-3 text-lg"></i> Tentang Qualify
         </a>
         <a href="#" onclick="showPage('tutorials')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors" id="nav-tutorials">
-          <i class="fa fa-book-open w-6 text-center mr-3 text-lg"></i> Panduan Teknis (SOP)
+          <i class="fa fa-book-open w-6 text-center mr-3 text-lg"></i> Panduan Teknis
         </a>
       </nav>
       <div class="p-6 text-center border-t border-slate-100 bg-slate-50/50">
@@ -730,7 +730,7 @@
 
     function showPage(pageId) {
       const pages = ['dashboard', 'tutorials'];
-      const titles = { 'dashboard': 'Tentang Qualify', 'tutorials': 'Panduan Teknis (SOP)' };
+      const titles = { 'dashboard': 'Tentang Qualify', 'tutorials': 'Panduan Teknis' };
       const pageTitle = document.getElementById('page-title');
       if(pageTitle) pageTitle.innerText = titles[pageId];
 
