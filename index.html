@@ -628,7 +628,7 @@
 
   <script>
     // MASUKKAN URL WEB APP GOOGLE SCRIPT BAPAK DI SINI
-    const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbwA1B5FDKhDvFequxq3OiBHoIxkx4F63MJMqDMGc1A_Yk_i6Q3-hRrTL7Oln8KjU49N/exec'; 
+    const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbztfcg2Uom3vrBKkzuFeLMSEnwoClPEpQ2_ZdA_SZrHZcKXzdpu7pPs6ooE49sGt6g/exec'; 
 
     document.addEventListener("DOMContentLoaded", () => { initAppEngine(); });
 
@@ -856,11 +856,9 @@
       msgArea.scrollTop = msgArea.scrollHeight;
 
       try {
-        const response = await fetch(GAS_API_URL, {
-          method: 'POST',
-          body: JSON.stringify({ action: 'chat', message: msg }),
-          headers: { "Content-Type": "text-plain;charset=utf-8" }
-        });
+        // KITA UBAH CARA PANGGILANNYA MENJADI GET (Super Aman dari CORS Google)
+        const fetchUrl = GAS_API_URL + '?action=chat&message=' + encodeURIComponent(msg);
+        const response = await fetch(fetchUrl);
         
         const responseText = await response.text();
         const loadingEl = document.getElementById(loadingId);
@@ -870,7 +868,7 @@
       } catch (error) {
         const loadingEl = document.getElementById(loadingId);
         if(loadingEl) loadingEl.remove();
-        appendMessage('Maaf, terjadi kesalahan koneksi dengan server AI. Pastikan URL API sudah benar.', 'bot');
+        appendMessage('Maaf, terjadi kesalahan koneksi dengan server AI. Pastikan URL API sudah benar dan Anda sudah melakukan "New Deployment" di Google Script.', 'bot');
       }
     }
 
