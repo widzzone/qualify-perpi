@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Qualify by PERPI</title>
-
-  <link rel="icon" href="https://www.image2url.com/r2/default/images/1782380726417-1e78343b-bdc1-4e6a-9133-be496df78f10.png" type="image/png">
-
+  
   <meta property="og:title" content="Qualify by PERPI">
-  <meta property="og:description" content="Pusat Panduan Teknis dan Sistem Proteksi dan Validasi Responden.">
-  <meta property="og:image" content="https://www.image2url.com/r2/default/images/1782380726417-1e78343b-bdc1-4e6a-9133-be496df78f10.png">
+  <meta property="og:description" content="Pusat Panduan Teknis (SOP) dan Sistem Proteksi Kemurnian Data Riset PERPI.">
+  <meta property="og:image" content="https://panduan-qualify.perpi.id/logo-qualify.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="500">
+  <meta property="og:image:height" content="500">
   <meta property="og:url" content="https://panduan-qualify.perpi.id/">
   <meta property="og:type" content="website">
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Qualify by PERPI">
-  <meta name="twitter:image" content="https://www.image2url.com/r2/default/images/1782380726417-1e78343b-bdc1-4e6a-9133-be496df78f10.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
@@ -32,10 +30,6 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     .animate-fade { animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     
-    /* Hide scrollbar for horizontal menu */
-    .hide-scrollbar::-webkit-scrollbar { display: none; }
-    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #f1f5f9; }
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
@@ -49,7 +43,7 @@
       <div class="w-14 h-14 border-4 border-blue-100 rounded-full"></div>
       <div class="w-14 h-14 border-4 border-blue-700 rounded-full border-t-transparent animate-spin absolute top-0 left-0"></div>
     </div>
-    <p class="mt-6 text-blue-900 font-bold tracking-widest text-xs uppercase animate-pulse">Memuat Qualify...</p>
+    <p class="mt-6 text-blue-900 font-bold tracking-widest text-xs uppercase animate-pulse">Memuat Data Qualify...</p>
   </div>
 
   <div id="mobile-overlay" onclick="closeMobileMenu()" class="fixed inset-0 bg-slate-900/50 z-[105] hidden lg:hidden transition-opacity opacity-0 duration-300"></div>
@@ -63,10 +57,10 @@
       </div>
       <nav class="flex-1 mt-2 space-y-2 px-4">
         <a href="#" onclick="showPage('dashboard')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors sidebar-active" id="nav-dashboard">
-          <i class="fa fa-chart-pie w-6 text-center mr-3 text-lg"></i> Tentang Qualify
+          <i class="fa fa-chart-pie w-6 text-center mr-3 text-lg"></i> Ringkasan & Tentang
         </a>
         <a href="#" onclick="showPage('tutorials')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors" id="nav-tutorials">
-          <i class="fa fa-book-open w-6 text-center mr-3 text-lg"></i> Panduan Teknis
+          <i class="fa fa-book-open w-6 text-center mr-3 text-lg"></i> Panduan Teknis (SOP)
         </a>
       </nav>
       <div class="p-6 text-center border-t border-slate-100 bg-slate-50/50">
@@ -81,7 +75,7 @@
           <button onclick="openMobileMenu()" class="lg:hidden text-slate-600 hover:text-blue-600 text-xl p-2 rounded-lg focus:outline-none">
             <i class="fa fa-bars"></i>
           </button>
-          <h1 id="page-title" class="text-sm sm:text-lg md:text-xl font-bold text-slate-800 tracking-tight uppercase truncate max-w-[140px] sm:max-w-none">Tentang Qualify</h1>
+          <h1 id="page-title" class="text-sm sm:text-lg md:text-xl font-bold text-slate-800 tracking-tight uppercase truncate max-w-[140px] sm:max-w-none">Ringkasan & Tentang</h1>
         </div>
         <a href="https://qualifynew.perpi.id/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold py-2 sm:py-2.5 px-4 sm:px-6 rounded-lg shadow transition-all flex items-center">
           <i class="fa fa-external-link-alt mr-1.5 sm:mr-2 text-xs"></i> <span class="hidden sm:inline">Login ke Qualify</span><span class="sm:hidden">Login</span>
@@ -95,7 +89,7 @@
           <div class="space-y-6">
               <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden flex flex-col items-center text-center">
                  <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl mb-3"><i class="fa fa-shield-halved"></i></div>
-                 <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2">Sistem Proteksi dan Validasi Responden</h2>
+                 <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2">Sistem Proteksi Kemurnian Data Riset</h2>
                  <p class="text-slate-500 text-sm leading-relaxed max-w-3xl">
                     Aplikasi eksklusif PERPI untuk mendeteksi <i>"profesional respondent"</i> yang secara sengaja mengikuti FGD/CLT berulang. Melalui validasi sentral, kami menjaga kualitas hasil riset pasar di Indonesia agar terbebas dari bias data.
                  </p>
@@ -103,17 +97,15 @@
 
               <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm premium-card">
-                  <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Total Responden Tervalidasi</p>
+                  <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Total Responden Filtered</p>
                   <h3 class="text-2xl font-extrabold text-slate-800" id="stat-respondent">...</h3>
                   <p class="text-emerald-500 text-xs mt-2 font-medium flex items-center"><i class="fa fa-clock-rotate-left mr-1.5"></i> Data Historis 10 Tahun</p>
                 </div>
-                
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm premium-card">
-                  <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Usage Growth (2023-2025)</p>
+                  <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Market Quality Growth</p>
                   <h3 class="text-2xl font-extrabold text-slate-800" id="stat-growth">...</h3>
                   <p class="text-blue-500 text-xs mt-2 font-medium flex items-center"><i class="fa fa-bolt mr-1.5"></i> Multiple Submission Effect</p>
                 </div>
-                
                 <div class="bg-[#1e293b] p-5 rounded-2xl shadow-sm flex flex-col justify-center text-white premium-card">
                   <p class="text-blue-200 text-xs font-bold uppercase tracking-wider mb-1">Status Sistem</p>
                   <h3 class="text-lg font-bold">PERPI EXCLUSIVE</h3>
@@ -129,19 +121,11 @@
 
           <div class="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm mt-8">
             <h2 class="text-xl sm:text-2xl font-bold text-blue-900 mb-8 border-b pb-4">Tentang Qualify</h2>
-            
             <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-[15px] leading-relaxed space-y-5 text-justify">
-              <p>
-                <b>Qualify</b> adalah sebuah aplikasi yang disediakan oleh PERPI untuk membantu mengidentifikasi “profesional respondent” dalam event FGD atau CLT. <b>Profesional respondent</b> adalah responden yang dengan sengaja dan menjadikan aktifitasnya menjadi responden FGD atau CLT sebagai profesi dimana yang bersangkutan dapat mengikuti beberapa event FGD atau CLT di berbagai lokasi atau waktu yang diadakan oleh perusahaan market riset. Keberadaan <i>respondent proffesional</i> ini mengurangi kualitas dari FGD/CLT yang dilakukan dan sulit untuk dideteksi di masing-masing perusahaan riset.
-              </p>
-              <p>
-                Implementasi penggunaan aplikasi <b>Qualify</b> dimulai pada tahun 2015, dan tercatat penggunaannya terus meningkat dari tahun ke tahun. Di tahun 2023 PERPI bekerjasama dengan <b>Starcore</b> sebagai technology partner dan melakukan penyempurnaan aplikasi <b>Qualify</b> dengan beberapa fitur baru, salah satunya adalah fitur multiple submission. Penggunaan aplikasi akhirnya meningkat hingga 2x lipat, tercatat di akhir tahun 2025 lalu <b>Qualify</b> telah digunakan untuk mengidentifikasi lebih dari <b>200 ribu responden</b> dalam 10 tahun terakhir.
-              </p>
-              <p>
-                Aplikasi ini dibatasi penggunaannya secara eksklusif hanya untuk perusahaan yang menjadi anggota PERPI saja. Tentu dengan harapan semakin banyak perusahaan anggota PERPI yang menggunakan aplikasi ini maka akan semakin lengkap database dan proses identifikasi <i>professional respondent</i> ini dapat dilakukan, dampaknya kualitas hasil FGD dan CLT akan lebih meningkat lagi.
-              </p>
+              <p><b>Qualify</b> adalah sebuah aplikasi yang disediakan oleh PERPI untuk membantu mengidentifikasi “profesional respondent” dalam event FGD atau CLT. <b>Profesional respondent</b> adalah responden yang dengan sengaja dan menjadikan aktifitasnya menjadi responden FGD atau CLT sebagai profesi dimana yang bersangkutan dapat mengikuti beberapa event FGD atau CLT di berbagai lokasi atau waktu yang diadakan oleh perusahaan market riset. Keberadaan <i>respondent proffesional</i> ini mengurangi kualitas dari FGD/CLT yang dilakukan dan sulit untuk dideteksi di masing-masing perusahaan riset.</p>
+              <p>Implementasi penggunaan aplikasi <b>Qualify</b> dimulai pada tahun 2015, dan tercatat penggunaannya terus meningkat dari tahun ke tahun. Di tahun 2023 PERPI bekerjasama dengan <b>Starcore</b> sebagai technology partner dan melakukan penyempurnaan aplikasi <b>Qualify</b> dengan beberapa fitur baru, salah satunya adalah fitur multiple submission. Penggunaan aplikasi akhirnya meningkat hingga 2x lipat, tercatat di akhir tahun 2025 lalu <b>Qualify</b> telah digunakan untuk mengidentifikasi lebih dari <b>200 ribu responden</b> dalam 10 tahun terakhir.</p>
+              <p>Aplikasi ini dibatasi penggunaannya secara eksklusif hanya untuk perusahaan yang menjadi anggota PERPI saja. Tentu dengan harapan semakin banyak perusahaan anggota PERPI yang menggunakan aplikasi ini maka akan semakin lengkap database dan proses identifikasi <i>professional respondent</i> ini dapat dilakukan, dampaknya kualitas hasil FGD dan CLT akan lebih meningkat lagi.</p>
             </div>
-
             <div class="mt-10">
               <h3 class="font-bold text-slate-800 text-base sm:text-lg mb-4">Jenis pengguna (user roles) di aplikasi ini terbagi atas 4 kategori yaitu :</h3>
               <ul class="space-y-4 text-sm sm:text-[15px] text-slate-600 bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-100">
@@ -151,135 +135,120 @@
                 <li class="flex items-start"><div class="mt-1.5 mr-3 w-2 h-2 bg-blue-600 rounded-full shrink-0"></div><p><b>4. QC Officer;</b> yaitu tim dari member PERPI yang ditugaskan oleh QC Manager (PIC Member Qualify) untuk menginput responden untuk diidentifikasi apakah duplikat (pernah didaftarkan). QC Officer juga bisa mengakses daftar semua responden yang sudah diinput oleh yang bersangkutan saja.</p></li>
               </ul>
             </div>
-
             <div class="mt-10 pt-8 text-center overflow-hidden">
               <h3 class="font-bold text-slate-800 text-base sm:text-lg mb-6 uppercase tracking-wider">Matriks Otoritas Hak Akses Sistem</h3>
               <div class="rounded-2xl overflow-x-auto border border-slate-200 shadow-md">
-                <img src="https://www.image2url.com/r2/default/images/1782554358031-38c53a21-f0f5-4555-8ec8-4c1128a2d47e.jpeg" alt="User Roles Matrix" class="w-full h-auto min-w-[600px]">
+                <img src="https://www.image2url.com/r2/default/images/1782381789719-63f2fd05-fa26-47b7-9926-5243b9266fb4.png" alt="User Roles Matrix" class="w-full h-auto min-w-[600px]">
               </div>
             </div>
-            
             <div class="mt-10 bg-blue-50 p-4 sm:p-5 rounded-2xl border border-blue-100 text-blue-900 text-xs sm:text-sm font-medium text-center">
               <i class="fa fa-info-circle mr-2 text-blue-600"></i> Pengurus PERPI akan memberikan user dan password untuk QC Manager saat pertama kali mengakses aplikasi Qualify. Lalu Login melalui laman <a href="https://qualifynew.perpi.id/" target="_blank" class="font-bold underline text-blue-700 hover:text-blue-800 break-all">https://qualifynew.perpi.id/</a> ini.
             </div>
           </div>
-
         </div>
 
         <div id="page-tutorials" class="hidden space-y-6 animate-fade pb-10">
           <div class="bg-white p-4 sm:p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm">
-            <h2 class="text-xl sm:text-2xl font-extrabold text-[#0f172a] tracking-tight mb-6 sm:mb-8">QUALIFY KNOWLEDGE HUB: PANDUAN PENGGUNAAN TERPADU</h2>
+            <h2 class="text-xl font-bold text-slate-800 mb-6 border-b border-slate-100 pb-4">Pusat Panduan Video & Teks</h2>
             
-            <div class="flex overflow-x-auto gap-2 sm:gap-3 pb-4 mb-4 border-b border-slate-200 hide-scrollbar scroll-smooth">
-                <button onclick="switchVideo('v1', this, '1. Panduan Ringkas Penggunaan Aplikasi QUALIFY')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-blue-600 text-white shadow-md border border-blue-600 video-tab-btn">1. Panduan Ringkas & Flowchart</button>
-                <button onclick="switchVideo('v2', this, '2. Panduan Cara Login & Edit Profil/Password')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">2. Login & Profil</button>
-                <button onclick="switchVideo('v3', this, '3. Panduan Menambah Member/Company Baru')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">3. Create Member</button>
-                <button onclick="switchVideo('v4', this, '4. Panduan Menambah QC Manager Baru')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">4. Create QC Manager</button>
-                <button onclick="switchVideo('v5', this, '5. Panduan Menambah PERPI Officer Baru')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">5. Create PERPI Officer</button>
-                <button onclick="switchVideo('v6', this, '6. Panduan Menambah QC Officer Baru')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">6. Create QC Officer</button>
-                <button onclick="switchVideo('v7', this, '7. Panduan Cara Input Form Respondent')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">7. Single Submit</button>
-                <button onclick="switchVideo('v8', this, '8. Panduan Cara Submit Multiple Responden')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn">8. Multiple Submit</button>
-                <button onclick="switchVideo('v9', this, '9. Panduan Cara Menangani Error Saat Upload File')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-red-50 text-red-600 hover:bg-red-100 hover:text-red-700 border border-red-200 video-tab-btn">9. Error Handling</button>
-            </div>
-
-            <div id="video-top-description" class="text-sm text-slate-700 mb-4 bg-slate-50 p-3 sm:p-4 rounded-xl border border-slate-200 flex items-start max-w-4xl mx-auto transition-all duration-300">
-               <i class="fa fa-info-circle mr-2 mt-0.5 text-blue-600 shrink-0"></i>
-               <span id="video-desc-text" class="leading-relaxed">Video ini memberikan gambaran singkat mengenai alur kerja dan flowchart penggunaan aplikasi QUALIFY secara keseluruhan.</span>
-            </div>
-
-            <div class="bg-slate-900 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-slate-200 aspect-video relative flex items-center justify-center w-full max-w-4xl mx-auto mb-6 sm:mb-10">
-               <div id="iframe-loader" class="absolute z-10 flex flex-col items-center">
-                 <i class="fa fa-circle-notch fa-spin text-3xl sm:text-4xl text-blue-500 mb-3"></i>
-                 <p class="text-slate-300 text-[10px] sm:text-xs font-medium tracking-widest uppercase">Memuat Video Server...</p>
-               </div>
-               <iframe id="videoPlayer" src="https://drive.google.com/file/d/13Uw7fzDtt3r-Ztih6vbgf9FcUhNMUItj/preview" class="w-full h-full relative z-20" allow="autoplay; encrypted-media" allowfullscreen referrerpolicy="no-referrer" onload="document.getElementById('iframe-loader').style.display='none'"></iframe>
-            </div>
-
-            <div class="text-center mb-10">
-                <h3 class="text-lg sm:text-2xl font-bold text-slate-800 px-2" id="video-title-display">1. Panduan Ringkas Penggunaan Aplikasi QUALIFY</h3>
-                <p class="text-slate-500 text-xs sm:text-sm mt-2"><i class="fa fa-book-open mr-1.5 text-blue-500"></i> Detail modul panduan terlampir di bawah ini.</p>
-            </div>
-
-            <div id="doc-container">
+            <div class="flex flex-col lg:flex-row shadow-xl rounded-2xl border border-slate-800 overflow-hidden mb-8">
               
-              <div id="doc-v1" class="doc-block block animate-fade">
-                <div class="bg-slate-50 p-4 sm:p-6 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-inner">
-                  
-                  <p class="text-slate-600 text-sm sm:text-base text-center max-w-4xl mx-auto mb-10 leading-relaxed">
-                    Aplikasi QUALIFY dirancang untuk membantu tim Quality Control (QC) dalam mendeteksi "Profesional Respondents". Responden profesional adalah responden yang mengikuti beberapa acara riset (seperti FGD/CLT) di tempat atau waktu yang berbeda secara berulang. Sistem ini menggunakan NIK (Nomor Induk Kependudukan) pada KTP sebagai identifier unik untuk mengecek riwayat duplikasi responden di dalam database QUALIFY.
-                  </p>
+              <div class="flex-1 flex flex-col bg-white border-r border-slate-700">
+                
+                <div id="video-top-description" class="px-5 py-4 border-b border-slate-200 text-sm text-slate-700">
+                   <span id="video-desc-text" class="leading-relaxed">Video ini memberikan gambaran singkat mengenai alur kerja dan flowchart penggunaan aplikasi QUALIFY secara keseluruhan.</span>
+                </div>
 
-                  <h4 class="font-extrabold text-slate-800 text-base sm:text-lg mb-6 text-center uppercase tracking-wider">Tiga Langkah Utama Pendeteksian</h4>
-                  
-                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center relative premium-card">
-                      <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-                      <h5 class="font-bold text-slate-800 mb-2">Submit Single/Multiple Respondents</h5>
-                      <p class="text-xs sm:text-sm text-slate-500">Mengunggah data responden secara manual satu per satu atau massal menggunakan template.</p>
-                      <i class="fa fa-arrow-down md:fa-arrow-right absolute -bottom-4 md:-right-4 left-1/2 md:left-auto md:top-1/2 -translate-x-1/2 md:translate-x-0 md:-translate-y-1/2 text-slate-300 text-2xl"></i>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center relative premium-card mt-4 md:mt-0">
-                      <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
-                      <h5 class="font-bold text-slate-800 mb-2">Automatic Identification</h5>
-                      <p class="text-xs sm:text-sm text-slate-500">Sistem secara otomatis akan mengidentifikasi duplikasi ID (NIK) dari database QUALIFY.</p>
-                      <i class="fa fa-arrow-down md:fa-arrow-right absolute -bottom-4 md:-right-4 left-1/2 md:left-auto md:top-1/2 -translate-x-1/2 md:translate-x-0 md:-translate-y-1/2 text-slate-300 text-2xl"></i>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center premium-card mt-4 md:mt-0">
-                      <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
-                      <h5 class="font-bold text-slate-800 mb-2">Approve / Reject</h5>
-                      <p class="text-xs sm:text-sm text-slate-500">Menyetujui atau menolak responden yang telah diunggah berdasarkan hasil pengecekan duplikasi.</p>
-                    </div>
-                  </div>
-
-                  <hr class="border-slate-200 mb-10">
-
-                  <h4 class="font-extrabold text-slate-800 text-base sm:text-lg mb-6 text-center uppercase tracking-wider">Panduan Penggunaan Sistem (Contoh: Akses QC Manager)</h4>
-                  <p class="text-slate-600 text-sm sm:text-base text-center mb-8">Berikut adalah langkah-langkah teknis penggunaan aplikasi web QUALIFY setelah Anda melakukan login:</p>
-                  
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100">
-                      <h5 class="font-bold text-blue-700 mb-3"><i class="fa fa-chart-pie mr-2"></i> 1. Dashboard</h5>
-                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Halaman utama ini menampilkan ringkasan data statistik aktivitas pengguna dan tren data. Informasi yang ditampilkan meliputi jumlah pengguna terdaftar, pengguna aktif (hari ini, bulan ini, tahun ini), grafik tren submit/approval, dan persentase tingkat duplikasi (Duplication Rate).</p>
-                    </div>
-                    <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100">
-                      <h5 class="font-bold text-blue-700 mb-3"><i class="fa fa-users-gear mr-2"></i> 2. User Management</h5>
-                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Menu ini digunakan untuk mengelola pengguna. Sebagai QC Manager, Anda dapat melihat daftar pengguna di perusahaan Anda dan memiliki akses untuk membuat atau mengedit akun khusus untuk QC Officer di bawah tim Anda.</p>
-                    </div>
-                    <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 md:col-span-2">
-                      <h5 class="font-bold text-blue-700 mb-3"><i class="fa fa-clipboard-check mr-2"></i> 3. Respondent Approval</h5>
-                      <p class="text-xs sm:text-sm text-slate-600 mb-4">Menu ini adalah area kerja utama untuk mengunggah dan memverifikasi data responden.</p>
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                          <p class="text-slate-800 font-bold text-xs sm:text-sm mb-2">Cara Mengunggah Data Responden:</p>
-                          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-600">
-                            <li>Klik tombol Input Form untuk memasukkan data responden baru secara manual satu per satu.</li>
-                            <li>Klik tombol Download Template untuk mengunduh format Excel jika ingin mengunggah data dalam jumlah banyak secara bersamaan.</li>
-                            <li>Isi data pada file Excel sesuai kolom yang disediakan (NIK, Nama, Tanggal Event, Kota, Proyek, Industri).</li>
-                            <li>Klik tombol Upload New Respondent dan unggah file Excel yang sudah terisi.</li>
-                            <li>Klik Submit untuk memproses data.</li>
-                          </ul>
-                        </div>
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                          <p class="text-slate-800 font-bold text-xs sm:text-sm mb-2">Cara Verifikasi Data:</p>
-                          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-600">
-                            <li>Setelah data berhasil diunggah, tabel akan menampilkan daftar responden.</li>
-                            <li>Perhatikan kolom Duplicate NIK. Jika sistem menemukan riwayat NIK yang sama di database, peringatan duplikasi akan muncul.</li>
-                            <li>Klik ikon pada kolom Duplicate NIK untuk melihat detail riwayat partisipasi responden tersebut.</li>
-                            <li>Klik ikon silang (X) warna merah untuk Reject responden jika terbukti duplikat.</li>
-                            <li>Klik ikon centang warna hijau untuk Approve responden.</li>
-                            <li>Gunakan tombol Approve All atau Reject All di bagian atas tabel untuk memproses seluruh data sekaligus.</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 md:col-span-2">
-                      <h5 class="font-bold text-blue-700 mb-3"><i class="fa fa-list-ul mr-2"></i> 4. Respondent List</h5>
-                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Menu ini berfungsi sebagai rekapitulasi data responden. Anda dapat melihat seluruh daftar responden yang sebelumnya sudah di-approve maupun di-reject pada menu Respondent Approval. Gunakan fitur filter Status di bagian atas tabel untuk memilah tampilan khusus responden yang disetujui saja atau ditolak saja.</p>
-                    </div>
-                  </div>
-
+                <div class="bg-[#0f172a] aspect-video relative flex items-center justify-center w-full">
+                   <div id="iframe-loader" class="absolute z-10 flex flex-col items-center">
+                     <i class="fa fa-circle-notch fa-spin text-4xl text-blue-500 mb-3"></i>
+                     <p class="text-slate-300 text-xs font-medium tracking-widest uppercase">Memuat Video Server...</p>
+                   </div>
+                   <iframe id="videoPlayer" src="https://drive.google.com/file/d/13Uw7fzDtt3r-Ztih6vbgf9FcUhNMUItj/preview" class="w-full h-full relative z-20" allow="autoplay; encrypted-media" allowfullscreen referrerpolicy="no-referrer" onload="document.getElementById('iframe-loader').style.display='none'"></iframe>
+                </div>
+                <div class="p-5 bg-white h-full border-t border-slate-200">
+                    <h3 class="text-lg font-bold text-slate-800" id="video-title-display">1. Panduan Ringkas Penggunaan Aplikasi QUALIFY</h3>
+                    <p class="text-sm text-slate-500 mt-1.5 flex items-center"><i class="fa fa-circle-info mr-1.5 text-blue-500"></i> Teks panduan selengkapnya dapat dibaca di bawah ini.</p>
                 </div>
               </div>
+
+              <div class="w-full lg:w-[320px] bg-[#1e293b] flex flex-col shrink-0 overflow-y-auto max-h-[500px] lg:max-h-[600px] scroll-smooth">
+                <div class="p-4 border-b border-slate-700/50 flex justify-between items-center text-slate-300 font-semibold text-sm sticky top-0 bg-[#1e293b] z-10">
+                  <span>Home</span> <i class="fa fa-chevron-down text-xs"></i>
+                </div>
+                
+                <div class="flex flex-col pb-4">
+                    <button onclick="switchVideo('v1', this, '1. Panduan Ringkas Penggunaan Aplikasi QUALIFY')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-white bg-slate-800/50 border-l-[3px] border-blue-500 transition-colors video-tab-btn font-medium">1. Panduan Ringkas Penggunaan</button>
+                    <button onclick="switchVideo('v2', this, '2. Panduan Cara Login & Edit Profil/Password')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 video-tab-btn">2. Login & Edit Profil</button>
+                    <button onclick="switchVideo('v3', this, '3. Panduan Menambah Member/Company Baru')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 video-tab-btn">3. Menambah Member Baru</button>
+                    <button onclick="switchVideo('v4', this, '4. Panduan Menambah QC Manager Baru')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 video-tab-btn">4. Create User QC Manager</button>
+                    <button onclick="switchVideo('v5', this, '5. Panduan Menambah PERPI Officer Baru')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 video-tab-btn">5. Create User PERPI Officer</button>
+                    <button onclick="switchVideo('v6', this, '6. Panduan Menambah QC Officer Baru')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 video-tab-btn">6. Create User QC Officer</button>
+                    <button onclick="switchVideo('v7', this, '7. Panduan Cara Input Form Respondent')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 video-tab-btn">7. Input Form Respondent</button>
+                    <button onclick="switchVideo('v8', this, '8. Panduan Cara Submit Multiple Responden')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 video-tab-btn">8. Submit Multiple Responden</button>
+                    <button onclick="switchVideo('v9', this, '9. Panduan Cara Menangani Error Saat Upload File')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-red-400 hover:bg-slate-800 hover:text-red-300 transition-colors border-l-[3px] border-transparent hover:border-red-500 video-tab-btn">9. Penanganan Error Upload</button>
+                </div>
+              </div>
+            </div>
+            
+            <p class="text-xs text-slate-400 text-center italic">*Pilih menu di sebelah kanan untuk memutar materi video yang berbeda.</p>
+          </div>
+
+          <div id="doc-container" class="space-y-6">
+            
+            <div id="doc-v1" class="doc-block block animate-fade">
+              <div class="bg-white p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm prose prose-slate max-w-none text-slate-600 text-sm sm:text-[14px]">
+                <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-6 border-b border-slate-100 pb-4">Panduan Ringkas Penggunaan Aplikasi QUALIFY</h3>
+                <p>Aplikasi QUALIFY dirancang untuk membantu tim Quality Control (QC) dalam mendeteksi "Profesional Respondents". Responden profesional adalah responden yang mengikuti beberapa acara riset (seperti FGD/CLT) di tempat atau waktu yang berbeda secara berulang.</p>
+                <p>Sistem ini menggunakan NIK (Nomor Induk Kependudukan) pada KTP sebagai identifier unik untuk mengecek riwayat duplikasi responden di dalam database QUALIFY.</p>
+                
+                <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4 mt-8">Tiga Langkah Utama Pendeteksian</h4>
+                <ol class="list-decimal pl-5 space-y-3 mb-8">
+                  <li><strong>Submit Single/Multiple Respondents:</strong> Mengunggah data responden secara manual satu per satu atau massal menggunakan template.</li>
+                  <li><strong>Automatic Identification:</strong> Sistem secara otomatis akan mengidentifikasi duplikasi ID (NIK) dari database QUALIFY.</li>
+                  <li><strong>Approve / Reject:</strong> Menyetujui atau menolak responden yang telah diunggah berdasarkan hasil pengecekan duplikasi.</li>
+                </ol>
+
+                <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4 mt-8">Hak Akses Pengguna (User Roles and Access)</h4>
+                <p>Di dalam sistem QUALIFY, terdapat beberapa jenis peran dengan tingkat akses menu yang berbeda-beda:</p>
+                <div class="mt-4 mb-6 rounded-xl overflow-hidden border border-slate-200 shadow-md">
+                    <img src="https://www.image2url.com/r2/default/images/1782381789719-63f2fd05-fa26-47b7-9926-5243b9266fb4.png" alt="User Roles Matrix" class="w-full h-auto">
+                </div>
+                <p class="mb-8 text-blue-800 bg-blue-50 p-4 rounded-lg border border-blue-100 text-sm"><b>Catatan Khusus PERPI Admin:</b> Memiliki kewenangan tambahan untuk menambahkan data Company, Industry, atau City baru ke dalam sistem QUALIFY.</p>
+
+                <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Panduan Penggunaan Sistem (Contoh: Akses QC Manager)</h4>
+                <p>Berikut adalah langkah-langkah teknis penggunaan aplikasi web QUALIFY setelah Anda melakukan login:</p>
+                
+                <p class="mt-6 font-medium text-slate-800"><b>1. Dashboard</b><br>
+                Halaman utama ini menampilkan ringkasan data statistik aktivitas pengguna dan tren data. Informasi yang ditampilkan meliputi jumlah pengguna terdaftar, pengguna aktif (hari ini, bulan ini, tahun ini), grafik tren submit/approval, dan persentase tingkat duplikasi (Duplication Rate).</p>
+                
+                <p class="mt-6 font-medium text-slate-800"><b>2. User Management</b><br>
+                Menu ini digunakan untuk mengelola pengguna. Sebagai QC Manager, Anda dapat melihat daftar pengguna di perusahaan Anda dan memiliki akses untuk membuat atau mengedit akun khusus untuk QC Officer di bawah tim Anda.</p>
+
+                <p class="mt-6 font-medium text-slate-800"><b>3. Respondent Approval</b><br>
+                Menu ini adalah area kerja utama untuk mengunggah dan memverifikasi data responden.</p>
+                <p class="mt-2 text-slate-800 font-semibold">Cara Mengunggah Data Responden:</p>
+                <ul class="list-disc pl-5 mt-2 mb-6 space-y-2">
+                  <li>Klik tombol Input Form untuk memasukkan data responden baru secara manual satu per satu.</li>
+                  <li>Klik tombol Download Template untuk mengunduh format Excel jika ingin mengunggah data dalam jumlah banyak secara bersamaan.</li>
+                  <li>Isi data pada file Excel sesuai kolom yang disediakan (NIK, Nama, Tanggal Event, Kota, Proyek, Industri).</li>
+                  <li>Klik tombol Upload New Respondent dan unggah file Excel yang sudah terisi.</li>
+                  <li>Klik Submit untuk memproses data.</li>
+                </ul>
+                <p class="text-slate-800 font-semibold">Cara Verifikasi Data:</p>
+                <ul class="list-disc pl-5 mt-2 space-y-2 mb-6">
+                  <li>Setelah data berhasil diunggah, tabel akan menampilkan daftar responden.</li>
+                  <li>Perhatikan kolom Duplicate NIK. Jika sistem menemukan riwayat NIK yang sama di database, peringatan duplikasi akan muncul.</li>
+                  <li>Klik ikon pada kolom Duplicate NIK untuk melihat detail riwayat partisipasi responden tersebut.</li>
+                  <li>Klik ikon silang (X) warna merah untuk Reject responden jika terbukti duplikat.</li>
+                  <li>Klik ikon centang warna hijau untuk Approve responden.</li>
+                  <li>Gunakan tombol Approve All atau Reject All di bagian atas tabel untuk memproses seluruh data sekaligus.</li>
+                </ul>
+
+                <p class="mt-6 font-medium text-slate-800"><b>4. Respondent List</b><br>
+                Menu ini berfungsi sebagai rekapitulasi data responden. Anda dapat melihat seluruh daftar responden yang sebelumnya sudah di-approve maupun di-reject pada menu Respondent Approval. Gunakan fitur filter Status di bagian atas tabel untuk memilah tampilan khusus responden yang disetujui saja atau ditolak saja.</p>
+              </div>
+            </div>
 
             <div id="doc-v2" class="doc-block hidden animate-fade">
               <div class="bg-white p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm prose prose-slate max-w-none text-slate-600 text-sm sm:text-[14px]">
@@ -609,17 +578,14 @@
   <div id="chatbot-container" class="fixed bottom-6 right-4 sm:right-6 z-[100] flex flex-col items-end">
     <div id="chat-window" class="hidden w-[300px] sm:w-[350px] h-[450px] sm:h-[500px] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col mb-4 overflow-hidden transition-all duration-300 origin-bottom-right">
       <div class="bg-gradient-to-r from-blue-700 to-indigo-800 p-4 flex justify-between items-center text-white">
-        <div class="flex items-center">
-          <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-3"><i class="fa fa-robot"></i></div>
-          <div><h4 class="font-bold text-sm">Qualify AI Assistant</h4><p class="text-[10px] text-blue-200">Online | Powered by Gemini</p></div>
-        </div>
+        <div class="flex items-center"><div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-3"><i class="fa fa-robot"></i></div><div><h4 class="font-bold text-sm">Qualify AI Assistant</h4><p class="text-[10px] text-blue-200">Powered by Gemini</p></div></div>
         <button onclick="toggleChat()" class="text-blue-200 hover:text-white focus:outline-none"><i class="fa fa-times"></i></button>
       </div>
       <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-slate-50 flex flex-col gap-3">
-        <div class="bg-white border border-slate-200 text-slate-600 text-sm p-3 rounded-2xl rounded-tl-sm self-start shadow-sm max-w-[85%]">Halo! Saya Asisten AI Qualify. Ada yang bisa saya bantu terkait cara penggunaan aplikasi ini?</div>
+        <div class="bg-white border border-slate-200 text-slate-600 text-xs sm:text-sm p-3 rounded-2xl rounded-tl-sm self-start shadow-sm max-w-[85%]">Halo! Saya Asisten AI Qualify. Ada yang bisa saya bantu?</div>
       </div>
       <div class="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
-        <input type="text" id="chat-input" placeholder="Ketik pertanyaan Anda..." class="flex-1 bg-slate-100 text-sm rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-slate-200" onkeypress="handleChatKeyPress(event)">
+        <input type="text" id="chat-input" placeholder="Ketik pertanyaan..." class="flex-1 bg-slate-100 text-sm rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-slate-200" onkeypress="if(event.key === 'Enter') sendChatMessage()">
         <button onclick="sendChatMessage()" class="w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors shadow-md shrink-0 focus:outline-none"><i class="fa fa-paper-plane"></i></button>
       </div>
     </div>
@@ -627,8 +593,7 @@
   </div>
 
   <script>
-    // MASUKKAN URL WEB APP GOOGLE SCRIPT BAPAK DI SINI
-    const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbwca38BDmBNhmZM4GkORs-VoM83dUyH6tqj_az0FrWFxqMD4WiB8l1l6E2gpkyCT2QD/exec'; 
+    const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbwca38BDmBNhmZM4GkORs-VoM83dUyH6tqj_az0FrWFxqMD4WiB8l1l6E2gpkyCT2QD/exec'; // GANTI DENGAN URL ASLI BAPAK
 
     document.addEventListener("DOMContentLoaded", () => { initAppEngine(); });
 
@@ -650,7 +615,6 @@
       try {
         const response = await fetch(GAS_API_URL + '?action=getStats');
         const data = await response.json();
-        
         const elResp = document.getElementById('stat-respondent');
         const elGrow = document.getElementById('stat-growth');
         if(elResp) elResp.innerText = data.totalRespondents;
@@ -687,16 +651,15 @@
         'v9': 'https://drive.google.com/file/d/1498tn4T2x0--qd68UPQKI2KwLjvUJ87_/preview'
       };
 
-      // DESKRIPSI DINAMIS UNTUK SETIAP VIDEO
       const videoDescMap = {
         'v1': 'Video ini memberikan gambaran singkat mengenai alur kerja dan flowchart penggunaan aplikasi QUALIFY secara keseluruhan.',
         'v2': 'Panduan mengenai tata cara masuk ke dalam sistem dan melakukan perubahan pada profil atau kata sandi Anda.',
         'v3': 'Panduan khusus bagi <b>PERPI Admin</b> untuk mendaftarkan perusahaan atau member baru ke dalam sistem.',
-        'v4': 'Berikut ini panduan cara menambahkan user <b>QC Manager</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>PERPI Admin</b> saja.',
-        'v5': 'Berikut ini panduan cara menambahkan user <b>PERPI Officer</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>PERPI Admin</b> saja.',
-        'v6': 'Berikut ini panduan cara menambahkan user <b>QC Officer</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Manager</b> saja.',
+        'v4': 'Panduan bagi <b>PERPI Admin</b> untuk membuat dan mengelola akun dengan hak akses QC Manager.',
+        'v5': 'Panduan bagi <b>PERPI Admin</b> untuk mendaftarkan akun pengurus PERPI (PERPI Officer).',
+        'v6': 'Panduan bagi <b>QC Manager</b> untuk membuat dan mengelola akun tim Quality Control (QC Officer) di perusahaannya.',
         'v7': 'Berikut ini panduan cara input single (satu) responden di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
-        'v8': 'Berikut ini panduan cara submit multiple responden di Qualify dengan menggunakan file excel, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
+        'v8': 'Panduan cara mengunggah data puluhan hingga ratusan responden sekaligus menggunakan template Excel massal.',
         'v9': 'Penjelasan dan solusi untuk mengatasi berbagai kendala atau error yang sering muncul saat proses unggah file.'
       };
 
@@ -706,30 +669,36 @@
       const titleDisplay = document.getElementById('video-title-display');
       if (titleDisplay && videoTitle) titleDisplay.innerText = videoTitle;
 
-      // UPDATE TEKS DESKRIPSI DINAMIS
       const descBox = document.getElementById('video-top-description');
       const descText = document.getElementById('video-desc-text');
       if (descBox && descText) {
          if (videoDescMap[videoId]) {
             descText.innerHTML = videoDescMap[videoId];
-            descBox.style.display = 'flex';
+            descBox.style.display = 'block';
          } else {
             descBox.style.display = 'none';
          }
       }
 
       buttons.forEach(btn => {
-        btn.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn";
-        if(btn.innerText.includes('Error')) {
-           btn.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-red-50 text-red-600 hover:bg-red-100 hover:text-red-700 border border-red-200 video-tab-btn";
+        btn.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 video-tab-btn";
+        if(btn.parentElement.classList.contains('gap-0.5')) {
+            btn.className = "text-left w-full py-2.5 text-sm whitespace-normal text-slate-400 hover:text-white transition-colors video-tab-btn";
+            if(btn.innerText.includes('Error')) {
+                btn.className = "text-left w-full py-2.5 text-sm whitespace-normal text-red-400 hover:text-red-300 transition-colors video-tab-btn";
+            }
         }
       });
 
       if(btnElement) {
-        btnElement.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-blue-600 text-white shadow-md border border-blue-600 video-tab-btn";
-        if(btnElement.innerText.includes('Error')) {
-           btnElement.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-red-600 text-white shadow-md border border-red-600 video-tab-btn";
-        }
+          if(btnElement.parentElement.classList.contains('gap-0.5')) {
+              btnElement.className = "text-left w-full py-2.5 text-sm whitespace-normal text-blue-400 font-bold transition-colors video-tab-btn";
+              if(btnElement.innerText.includes('Error')) {
+                  btnElement.className = "text-left w-full py-2.5 text-sm whitespace-normal text-red-500 font-bold transition-colors video-tab-btn";
+              }
+          } else {
+              btnElement.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-white bg-slate-800/50 border-l-[3px] border-blue-500 transition-colors video-tab-btn font-medium";
+          }
       }
 
       docBlocks.forEach(block => { block.classList.replace('block', 'hidden'); });
@@ -741,7 +710,7 @@
 
     function showPage(pageId) {
       const pages = ['dashboard', 'tutorials'];
-      const titles = { 'dashboard': 'Tentang Qualify', 'tutorials': 'Panduan Teknis' };
+      const titles = { 'dashboard': 'Ringkasan & Tentang', 'tutorials': 'Panduan Teknis (SOP)' };
       const pageTitle = document.getElementById('page-title');
       if(pageTitle) pageTitle.innerText = titles[pageId];
 
@@ -759,10 +728,7 @@
         }
       });
       
-      // Auto-close menu on mobile after selection
-      if(window.innerWidth < 1024) {
-          closeMobileMenu();
-      }
+      if(window.innerWidth < 1024) closeMobileMenu();
     }
 
     function renderAnalyticsChart(chartData) {
@@ -838,10 +804,6 @@
       }
     }
 
-    function handleChatKeyPress(e) {
-      if(e.key === 'Enter') sendChatMessage();
-    }
-
     async function sendChatMessage() {
       const inputEl = document.getElementById('chat-input');
       const msg = inputEl.value.trim();
@@ -856,14 +818,11 @@
       msgArea.scrollTop = msgArea.scrollHeight;
 
       try {
-        // KITA UBAH CARA PANGGILANNYA MENJADI GET (Super Aman dari CORS Google)
         const fetchUrl = GAS_API_URL + '?action=chat&message=' + encodeURIComponent(msg);
         const response = await fetch(fetchUrl);
-        
         const responseText = await response.text();
         const loadingEl = document.getElementById(loadingId);
         if(loadingEl) loadingEl.remove();
-        
         appendMessage(responseText, 'bot');
       } catch (error) {
         const loadingEl = document.getElementById(loadingId);
@@ -874,7 +833,6 @@
 
     function appendMessage(text, sender) {
       const msgArea = document.getElementById('chat-messages');
-      
       let formattedText = text
         .replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-800">$1</strong>')
         .replace(/\*(.*?)\*/g, '<em>$1</em>')
