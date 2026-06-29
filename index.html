@@ -65,8 +65,8 @@
         <a href="#" onclick="showPage('dashboard')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors sidebar-active" id="nav-dashboard">
           <i class="fa fa-circle-info w-6 text-center mr-3 text-lg"></i> Tentang Qualify
         </a>
-        <a href="#" onclick="showPage('quick')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors" id="nav-quick">
-          <i class="fa fa-play-circle w-6 text-center mr-3 text-lg"></i> Panduan Ringkas
+        <a href="#" onclick="showPage('tutorials')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors" id="nav-tutorials">
+          <i class="fa fa-book-open w-6 text-center mr-3 text-lg"></i> Panduan Ringkas
         </a>
         <a href="#" onclick="showPage('submit')" class="flex items-center px-4 py-3.5 text-slate-600 rounded-xl hover:bg-slate-50 transition-colors" id="nav-submit">
           <i class="fa fa-clipboard-list w-6 text-center mr-3 text-lg"></i> Submit Respondent
@@ -707,13 +707,14 @@
     }
 
     // FUNGSI PINDAH HALAMAN SIDEBAR
-    function showPage(pageId) {
-      const pages = ['about', 'quick', 'submit', 'user'];
+   function showPage(pageId) {
+      // Pastikan ID ini sama persis dengan yang ada di HTML Bapak
+      const pages = ['dashboard', 'tutorials', 'submit', 'user'];
       const titles = { 
-        'about': 'Tentang Qualify', 
-        'quick': 'Panduan Ringkas', 
-        'submit': 'Submit Respondent', 
-        'user': 'User Management' 
+        'dashboard': 'Tentang Qualify', 
+        'tutorials': 'Panduan Ringkas',
+        'submit': 'Submit Respondent',
+        'user': 'User Management'
       };
       
       const pageTitle = document.getElementById('page-title');
@@ -737,7 +738,6 @@
           closeMobileMenu();
       }
     }
-
     // FUNGSI GANTI VIDEO: SUBMIT RESPONDENT
     function switchSubmitVideo(videoId, btnElement, videoTitle) {
       const player = document.getElementById('submitVideoPlayer');
@@ -771,7 +771,6 @@
       }
     }
 
-    // FUNGSI GANTI VIDEO: USER MANAGEMENT
     function switchUserVideo(videoId, btnElement, videoTitle) {
       const player = document.getElementById('userVideoPlayer');
       const descText = document.getElementById('user-desc-text');
