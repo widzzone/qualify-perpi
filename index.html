@@ -603,7 +603,41 @@
                 </ul>
               </div>
             </div>
+              
 
+          </div>
+        </div>
+          <div id="page-submit" class="hidden space-y-6 animate-fade pb-10">
+          <div class="bg-white p-4 sm:p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm">
+            <h2 class="text-xl font-bold text-slate-800 mb-6 border-b border-slate-100 pb-4">Submit Respondent</h2>
+            
+            <div class="flex flex-col lg:flex-row shadow-xl rounded-2xl border border-slate-800 overflow-hidden mb-8">
+              
+              <div class="flex-1 flex flex-col bg-white border-r border-slate-700">
+                <div class="px-5 py-4 border-b border-slate-200 text-sm text-slate-700 bg-slate-50">
+                   <span id="submit-desc-text" class="leading-relaxed">Berikut ini panduan cara input single (satu) responden di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.</span>
+                </div>
+                <div class="bg-[#0f172a] aspect-video relative flex items-center justify-center w-full">
+                   <iframe id="submitVideoPlayer" src="https://drive.google.com/file/d/13jF7nA9WGrEwGjhGMZ-r4Es-i5e02JXg/preview" class="w-full h-full relative z-20" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="p-5 bg-white h-full border-t border-slate-200">
+                    <h3 class="text-lg font-bold text-slate-800" id="submit-video-title">Input Single Respondent</h3>
+                </div>
+              </div>
+
+              <div class="w-full lg:w-[320px] bg-[#1e293b] flex flex-col shrink-0">
+                <div class="p-4 border-b border-slate-700/50 flex justify-between items-center text-slate-300 font-semibold text-sm bg-[#1e293b]">
+                  <span>Sub Menu</span> <i class="fa fa-chevron-down text-xs"></i>
+                </div>
+                
+                <div class="flex flex-col pb-4">
+                    <button onclick="switchSubmitVideo('v7', this, 'Input Single Respondent')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-white bg-slate-800/50 border-l-[3px] border-blue-500 transition-colors submit-tab-btn font-medium">Input Single Respondent</button>
+                    <button onclick="switchSubmitVideo('v8', this, 'Upload Multiple Respondent')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 submit-tab-btn">Upload Multiple Respondent</button>
+                    <button onclick="switchSubmitVideo('v9', this, 'Upload File Error Handling')" class="text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 submit-tab-btn">Upload File Error Handling</button>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
 
@@ -745,8 +779,15 @@
     }
 
     function showPage(pageId) {
-      const pages = ['dashboard', 'tutorials'];
-      const titles = { 'dashboard': 'Tentang Qualify', 'tutorials': 'Panduan Teknis' };
+      // Menambahkan submit dan user ke dalam sistem navigasi
+      const pages = ['dashboard', 'tutorials', 'submit', 'user'];
+      const titles = { 
+        'dashboard': 'Tentang Qualify', 
+        'tutorials': 'Panduan Ringkas',
+        'submit': 'Submit Respondent',
+        'user': 'User Management'
+      };
+      
       const pageTitle = document.getElementById('page-title');
       if(pageTitle) pageTitle.innerText = titles[pageId];
 
@@ -763,6 +804,12 @@
             }
         }
       });
+      
+      // Auto-close menu untuk versi Mobile HP
+      if(window.innerWidth < 1024 && typeof closeMobileMenu === 'function') {
+          closeMobileMenu();
+      }
+    }
       
       // Auto-close menu on mobile after selection
       if(window.innerWidth < 1024) {
