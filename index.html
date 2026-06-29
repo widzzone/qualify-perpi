@@ -19,7 +19,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
   
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-font-smoothing: antialiased; }
     .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; }
     .sidebar-active { border-right: 4px solid #1e3a8a; background: linear-gradient(90deg, transparent, #eff6ff); color: #1e3a8a; font-weight: 600; }
@@ -115,7 +115,7 @@
             <h2 class="text-xl sm:text-2xl font-bold text-blue-900 mb-8 border-b pb-4">Profil Aplikasi Qualify</h2>
             <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-[15px] leading-relaxed space-y-5 text-justify">
               <p><b>Qualify</b> adalah sebuah aplikasi yang disediakan oleh PERPI untuk membantu mengidentifikasi “profesional respondent” dalam event FGD atau CLT. <b>Profesional respondent</b> adalah responden yang dengan sengaja dan menjadikan aktifitasnya menjadi responden FGD atau CLT sebagai profesi dimana yang bersangkutan dapat mengikuti beberapa event FGD atau CLT di berbagai lokasi atau waktu yang diadakan oleh perusahaan market riset. Keberadaan <i>respondent proffesional</i> ini mengurangi kualitas dari FGD/CLT yang dilakukan dan sulit untuk dideteksi di masing-masing perusahaan riset.</p>
-              <p>Implementasi penggunaan aplikasi <b>Qualify</b> dimulai pada tahun 2015, and tercatat penggunaannya terus meningkat dari tahun ke tahun. Di tahun 2023 PERPI bekerjasama dengan <b>Starcore</b> sebagai technology partner dan melakukan penyempurnaan aplikasi <b>Qualify</b> dengan beberapa fitur baru, salah satunya adalah fitur multiple submission. Penggunaan aplikasi akhirnya meningkat hingga 2x lipat, tercatat di akhir tahun 2025 lalu <b>Qualify</b> telah digunakan untuk mengidentifikasi lebih dari <b>200 ribu responden</b> dalam 10 tahun terakhir.</p>
+              <p>Implementasi penggunaan aplikasi <b>Qualify</b> dimulai pada tahun 2015, dan tercatat penggunaannya terus meningkat dari tahun ke tahun. Di tahun 2023 PERPI bekerjasama dengan <b>Starcore</b> sebagai technology partner dan melakukan penyempurnaan aplikasi <b>Qualify</b> dengan beberapa fitur baru, salah satunya adalah fitur multiple submission. Penggunaan aplikasi akhirnya meningkat hingga 2x lipat, tercatat di akhir tahun 2025 lalu <b>Qualify</b> telah digunakan untuk mengidentifikasi lebih dari <b>200 ribu responden</b> dalam 10 tahun terakhir.</p>
             </div>
             <div class="mt-10">
               <h3 class="font-bold text-slate-800 text-base sm:text-lg mb-4">Jenis pengguna (user roles) di aplikasi ini terbagi atas 4 kategori yaitu :</h3>
@@ -150,6 +150,76 @@
             <div class="text-center mb-10">
                 <h3 class="text-lg sm:text-2xl font-bold text-slate-800 px-2">1. Panduan Ringkas Penggunaan Aplikasi QUALIFY</h3>
             </div>
+
+            <div class="bg-slate-50 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-inner max-w-4xl mx-auto">
+              <p class="text-slate-600 text-sm sm:text-base text-center mb-10 leading-relaxed">
+                Aplikasi QUALIFY dirancang untuk membantu tim Quality Control (QC) dalam mendeteksi "Profesional Respondents". Responden profesional adalah responden yang mengikuti beberapa acara riset (seperti FGD/CLT) di tempat atau waktu yang berbeda secara berulang. Sistem ini menggunakan NIK (Nomor Induk Kependudukan) pada KTP sebagai identifier unik untuk mengecek riwayat duplikasi responden di dalam database QUALIFY.
+              </p>
+
+              <h4 class="font-extrabold text-slate-800 text-base sm:text-lg mb-6 text-center uppercase tracking-wider">Tiga Langkah Utama Pendeteksian</h4>
+              
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center relative premium-card">
+                  <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                  <h5 class="font-bold text-slate-800 mb-2">Submit Single/Multiple Respondents</h5>
+                  <p class="text-xs sm:text-sm text-slate-500">Mengunggah data responden secara manual satu per satu atau massal menggunakan template.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center relative premium-card mt-4 md:mt-0">
+                  <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                  <h5 class="font-bold text-slate-800 mb-2">Automatic Identification</h5>
+                  <p class="text-xs sm:text-sm text-slate-500">Sistem secara otomatis akan mengidentifikasi duplikasi ID (NIK) dari database QUALIFY.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center premium-card mt-4 md:mt-0">
+                  <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                  <h5 class="font-bold text-slate-800 mb-2">Approve / Reject</h5>
+                  <p class="text-xs sm:text-sm text-slate-500">Menyetujui atau menolak responden yang telah diunggah berdasarkan hasil pengecekan duplikasi.</p>
+                </div>
+              </div>
+
+              <hr class="border-slate-200 mb-10">
+
+              <h4 class="font-extrabold text-slate-800 text-base sm:text-lg mb-6 text-center uppercase tracking-wider">Panduan Penggunaan Sistem (Contoh: Akses QC Manager)</h4>
+              <p class="text-slate-600 text-sm sm:text-base text-center mb-8">Berikut adalah langkah-langkah teknis penggunaan aplikasi web QUALIFY setelah Anda melakukan login:</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100">
+                  <h5 class="font-bold text-blue-700 mb-3"><i class="fa fa-chart-pie mr-2"></i> 1. Dashboard</h5>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Halaman utama ini menampilkan ringkasan data statistik aktivitas pengguna dan tren data. Informasi yang ditampilkan meliputi jumlah pengguna terdaftar, pengguna aktif (hari ini, bulan ini, tahun ini), grafik tren submit/approval, dan persentase tingkat duplikasi (Duplication Rate).</p>
+                </div>
+                <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100">
+                  <h5 class="font-bold text-blue-700 mb-3"><i class="fa fa-users-gear mr-2"></i> 2. User Management</h5>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Menu ini digunakan untuk mengelola pengguna. Sebagai QC Manager, Anda dapat melihat daftar pengguna di perusahaan Anda dan memiliki akses untuk membuat atau mengedit akun khusus untuk QC Officer di bawah tim Anda.</p>
+                </div>
+                <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 md:col-span-2">
+                  <h5 class="font-bold text-blue-700 mb-3"><i class="fa fa-clipboard-check mr-2"></i> 3. Respondent Approval</h5>
+                  <p class="text-xs sm:text-sm text-slate-600 mb-4">Menu ini adalah area kerja utama untuk mengunggah dan memverifikasi data responden.</p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                      <p class="text-slate-800 font-bold text-xs sm:text-sm mb-2">Cara Mengunggah Data Responden:</p>
+                      <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-600">
+                        <li>Klik tombol Input Form untuk memasukkan data responden baru secara manual satu per satu.</li>
+                        <li>Klik tombol Download Template untuk mengunduh format Excel.</li>
+                        <li>Isi data pada file Excel sesuai kolom yang disediakan.</li>
+                        <li>Klik tombol Upload New Respondent dan unggah file Excel yang sudah terisi.</li>
+                      </ul>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                      <p class="text-slate-800 font-bold text-xs sm:text-sm mb-2">Cara Verifikasi Data:</p>
+                      <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-600">
+                        <li>Perhatikan kolom Duplicate NIK. Jika sistem menemukan riwayat NIK yang sama di database, peringatan duplikasi akan muncul.</li>
+                        <li>Klik ikon silang (X) warna merah untuk Reject responden jika terbukti duplikat.</li>
+                        <li>Klik ikon centang warna hijau untuk Approve responden.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 md:col-span-2">
+                  <h5 class="font-bold text-blue-700 mb-3"><i class="fa fa-list-ul mr-2"></i> 4. Respondent List</h5>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Menu ini berfungsi sebagai rekapitulasi data responden. Anda dapat melihat seluruh daftar responden yang sebelumnya sudah di-approve maupun di-reject pada menu Respondent Approval.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -170,9 +240,113 @@
             <div class="bg-slate-900 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl aspect-video relative flex items-center justify-center w-full max-w-4xl mx-auto mb-6">
                <iframe id="player-submit" src="https://drive.google.com/file/d/13jF7nA9WGrEwGjhGMZ-r4Es-i5e02JXg/preview" class="w-full h-full relative z-20" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-            <div class="text-center mb-6">
+            
+            <div class="text-center mb-10">
                 <h3 class="text-lg sm:text-2xl font-bold text-slate-800 px-2" id="title-submit">Input Single Respondent</h3>
             </div>
+
+            <div class="max-w-4xl mx-auto">
+               <div id="doc-v7" class="doc-submit block animate-fade">
+                  <div class="bg-slate-50 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-inner prose prose-slate max-w-none text-slate-600 text-sm sm:text-[14px]">
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-6 border-b border-slate-100 pb-4">Panduan Cara Input Form Respondent</h3>
+                    <p class="mb-6">Panduan ini menjelaskan langkah-langkah untuk menginput data responden secara manual (satu per satu) ke dalam aplikasi QUALIFY guna mengecek status duplikasinya.</p>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4 mt-8">1. Cara Menginput Data Responden</h4>
+                    <ul class="list-disc pl-5 space-y-3 mb-8">
+                      <li>Setelah login ke aplikasi, pilih menu Respondent Approval pada panel navigasi di sebelah kiri.</li>
+                      <li>Klik tombol Input Form yang terdapat di bagian atas tabel.</li>
+                      <li>Pada kotak dialog Input Respondent yang muncul, lengkapi formulir pendaftaran dengan informasi berikut:
+                        <ul class="list-[circle] pl-6 mt-2 space-y-2">
+                          <li>NIK: Masukkan Nomor Induk Kependudukan responden sesuai KTP.</li>
+                          <li>Name: Masukkan nama lengkap responden.</li>
+                          <li>Event Date: Pilih tanggal pelaksanaan event/riset pada kalender yang disediakan.</li>
+                          <li>City: Pilih kota pelaksanaan dari menu dropdown.</li>
+                          <li>Project: Ketikkan nama project riset yang sedang berjalan.</li>
+                          <li>Industry: Pilih kategori industri yang relevan dengan project tersebut dari menu dropdown.</li>
+                        </ul>
+                      </li>
+                      <li>Setelah semua data dipastikan terisi, klik tombol Submit.</li>
+                    </ul>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4">2. Proses Verifikasi dan Persetujuan (Approve/Reject)</h4>
+                    <p class="mb-4">Setelah Anda menekan tombol Submit, sistem QUALIFY akan secara otomatis melakukan identifikasi dan langsung menampilkan kotak dialog hasil pengecekan duplikasi.</p>
+                    <p class="mt-6 font-bold text-slate-800">Skenario 1: Responden Unik (Tidak Terdeteksi Duplikat)</p>
+                    <ul class="list-disc pl-5 mt-2 mb-6 space-y-2">
+                      <li>Jika NIK responden belum pernah terdaftar di database sebelumnya, sistem akan menampilkan pesan peringatan: "This respondent is unique".</li>
+                      <li>Anda dapat langsung menyelesaikan proses dengan menekan tombol Approve (hijau) untuk menyetujui responden masuk ke dalam sistem.</li>
+                    </ul>
+                    <p class="font-bold text-slate-800">Skenario 2: Responden Terdeteksi Duplikat</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                      <li>Jika NIK responden sudah pernah digunakan pada project atau perusahaan lain, sistem akan menampilkan pesan: "Found 1 duplicate respondent(s) in this row" beserta detail histori partisipasi responden tersebut.</li>
+                      <li>Berdasarkan temuan histori tersebut, Anda diberikan kebebasan untuk memutuskan apakah akan menekan tombol Reject (merah) untuk menolak responden tersebut, atau tetap menekan Approve jika dirasa masih memenuhi kriteria perusahaan.</li>
+                    </ul>
+                  </div>
+               </div>
+
+               <div id="doc-v8" class="doc-submit hidden animate-fade">
+                  <div class="bg-slate-50 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-inner prose prose-slate max-w-none text-slate-600 text-sm sm:text-[14px]">
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-6 border-b border-slate-100 pb-4">Panduan Cara Submit Multiple Responden</h3>
+                    <p class="mb-6">Panduan ini menjelaskan cara mengunggah data responden secara massal menggunakan template Excel. Cara ini lebih efisien jika Anda memiliki puluhan atau ratusan data responden yang harus diperiksa sekaligus.</p>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4 mt-8">Langkah 1: Unduh Template Excel</h4>
+                    <ol class="list-decimal pl-5 space-y-3 mb-8">
+                      <li>Masuk ke aplikasi QUALIFY dan buka menu Respondent Approval.</li>
+                      <li>Klik tombol Download Template di bagian atas tabel. Anda hanya perlu mengunduh template ini satu kali.</li>
+                    </ol>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Langkah 2: Mengisi Data pada Template Excel</h4>
+                    <p class="mb-4">Buka file Excel yang telah diunduh dan isi data responden pada kolom yang disediakan. Sistem telah dilengkapi dengan proteksi data (data validation), jadi pastikan Anda mematuhi aturan berikut agar file dapat diunggah:</p>
+                    <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+                      <li><b>Kolom NIK:</b> Wajib diisi dengan 16 digit angka. Angka pertama tidak boleh 0 atau 4. Angka terakhir tidak boleh 0. Tidak boleh ada NIK ganda di dalam satu file yang sama.</li>
+                      <li><b>Kolom Name:</b> Wajib diisi minimal 3 huruf dan tidak boleh mengandung angka.</li>
+                      <li><b>Kolom Event Date:</b> Masukkan tanggal riset/FGD dalam format Date. Rentang waktu yang diizinkan adalah maksimal 7 hari ke belakang (H-7) atau maksimal 30 hari ke depan (H+30).</li>
+                      <li><b>Kolom City:</b> Harus dipilih dari daftar kota yang sudah ada pada kolom dropdown.</li>
+                      <li><b>Kolom Project:</b> Bebas diisi dengan teks apa saja.</li>
+                      <li><b>Kolom Industry:</b> Harus dipilih dari daftar industri yang tersedia pada dropdown.</li>
+                    </ul>
+                    <p class="mb-8 bg-amber-100 p-4 rounded-lg text-amber-900 font-medium"><b>Penting:</b> Anda bisa mengecek referensi daftar kota dan industri yang sah pada sheet atau tab "Version" di dalam file Excel tersebut. Jangan mengubah nama file Excel tersebut.</p>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Langkah 3: Mengunggah Data ke Sistem</h4>
+                    <ol class="list-decimal pl-5 space-y-3 mb-8">
+                      <li>Kembali ke aplikasi QUALIFY pada menu Respondent Approval.</li>
+                      <li>Klik tombol Upload New Respondent.</li>
+                      <li>Pada kotak dialog yang muncul, klik Choose File dan pilih file Excel yang telah Anda isi tadi.</li>
+                      <li>Klik Submit. Jika data sesuai dengan aturan sistem, akan muncul pesan "Data imported successfully".</li>
+                    </ol>
+                  </div>
+               </div>
+
+               <div id="doc-v9" class="doc-submit hidden animate-fade">
+                  <div class="bg-slate-50 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-inner prose prose-slate max-w-none text-slate-600 text-sm sm:text-[14px]">
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-6 border-b border-slate-100 pb-4">Panduan Cara Menangani Error Saat Upload File</h3>
+                    <p class="mb-6">Panduan ini menjelaskan langkah-langkah untuk mengatasi kendala atau error yang mungkin terjadi saat Anda mengunggah (upload) file Excel berisi data banyak responden (Multiple Respondent) ke dalam sistem QUALIFY. Terdapat dua jenis error utama yang sering terjadi beserta solusinya:</p>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4 mt-8">1. Error karena Nama File atau Format Tidak Sesuai (Invalid File Name)</h4>
+                    <ul class="list-disc pl-5 space-y-3 mb-8">
+                      <li><b>Penyebab:</b> Error ini muncul jika nama file yang Anda unggah tidak sama persis dengan file template yang diunduh dari sistem, atau jika format dan nama kolom di dalamnya telah diubah.</li>
+                      <li><b>Pesan Error:</b> Muncul kotak silang merah dengan tulisan "Validation failed. Invalid file name, please upload file RespondenList_v[versi].xlsx".</li>
+                      <li><b>Solusi:</b>
+                        <ul class="list-[circle] pl-6 mt-2 space-y-2">
+                          <li>Pastikan nama file yang diunggah sama persis dengan template aslinya (contoh: RespondenList_v20230708.xlsx).</li>
+                          <li>Gunakan file template asli yang diunduh dari sistem tanpa merubah struktur formatnya (sheet, baris kolom, dll.).</li>
+                          <li>Jika Anda menyalin data responden dari file Excel lain, sangat disarankan untuk menempelkan data menggunakan metode Copy -> Paste Value agar tidak merusak format bawaan template.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4">2. Error karena Kesalahan Pengisian Data (Validation Failed)</h4>
+                    <ul class="list-disc pl-5 space-y-3 mb-6">
+                      <li><b>Penyebab:</b> Error ini terjadi jika sistem mendeteksi adanya data yang diisi tidak sesuai dengan aturan validasi pengisian (misalnya: NIK kurang dari 16 digit, nama mengandung angka, kolom kota dibiarkan kosong, atau nama industri tidak sesuai daftar).</li>
+                      <li><b>Pesan Error:</b> Muncul peringatan "Validation failed, please check file Respondent_Validasi.xlsx that was just downloaded by the system". Seluruh isi file tersebut otomatis ditolak oleh sistem.</li>
+                      <li><b>Solusi:</b>
+                        <ul class="list-[circle] pl-6 mt-2 space-y-2">
+                          <li>Sistem akan secara otomatis mengunduh file Excel baru bernama Respondent_Validasi_[tanggal].xlsx ke perangkat Anda.</li>
+                          <li>Buka file hasil unduhan otomatis tersebut.</li>
+                          <li>Geser layar Excel ke sebelah kanan untuk menemukan kolom-kolom baru berisi keterangan error (seperti name_err, nik_err, city_err, dll.).</li>
+                          <li>Kolom error ini akan mendiagnosis dan memberi tahu Anda secara spesifik letak kesalahan pada setiap baris data (contoh pesannya: "Tidak boleh berisi angka" pada nama, atau "Data city kosong").</li>
+                          <li>Tutup file validasi tersebut, lalu buka kembali file template Excel asli Anda.</li>
+                          <li>Perbaiki bagian data yang keliru pada file asli sesuai dengan petunjuk error yang ditemukan sebelumnya.</li>
+                          <li>Simpan (Save) pembaruan tersebut, lalu kembali ke aplikasi QUALIFY dan ulangi proses unggah melalui tombol Upload New Respondent.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+               </div>
+            </div>
+
           </div>
         </div>
 
@@ -180,9 +354,9 @@
           <div class="bg-white p-4 sm:p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm">
             
             <div class="flex overflow-x-auto gap-2 sm:gap-3 pb-4 mb-6 border-b border-slate-200 hide-scrollbar">
-                <button onclick="switchSubVideo('user', 'v4', this, 'Create New QC Manager')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-blue-600 text-white shadow-md border border-blue-600 user-tab-btn">Create New QC Manager</button>
-                <button onclick="switchSubVideo('user', 'v6', this, 'Create New QC Officer')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 border border-slate-200 user-tab-btn">Create New QC Officer</button>
-                <button onclick="switchSubVideo('user', 'v5', this, 'Create New PERPI Officer')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 border border-slate-200 user-tab-btn">Create New PERPI Officer</button>
+                <button onclick="switchSubVideo('user', 'v4', this, 'Create New QC Manager')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-blue-600 text-white shadow-md border border-blue-600 tab-btn-user">Create New QC Manager</button>
+                <button onclick="switchSubVideo('user', 'v6', this, 'Create New QC Officer')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 border border-slate-200 tab-btn-user">Create New QC Officer</button>
+                <button onclick="switchSubVideo('user', 'v5', this, 'Create New PERPI Officer')" class="flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 border border-slate-200 tab-btn-user">Create New PERPI Officer</button>
             </div>
 
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6 flex items-start max-w-4xl mx-auto">
@@ -193,9 +367,122 @@
             <div class="bg-slate-900 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl aspect-video relative flex items-center justify-center w-full max-w-4xl mx-auto mb-6">
                <iframe id="player-user" src="https://drive.google.com/file/d/13Y-2pNAi88A04igypQR37H_NtKngGxPC/preview" class="w-full h-full relative z-20" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-            <div class="text-center mb-6">
+            
+            <div class="text-center mb-10">
                 <h3 class="text-lg sm:text-2xl font-bold text-slate-800 px-2" id="title-user">Create New QC Manager</h3>
             </div>
+
+            <div class="max-w-4xl mx-auto">
+               <div id="doc-v4" class="doc-user block animate-fade">
+                  <div class="bg-slate-50 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-inner prose prose-slate max-w-none text-slate-600 text-sm sm:text-[14px]">
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-6 border-b border-slate-100 pb-4">Panduan Menambah QC Manager Baru</h3>
+                    <p class="mb-6">Panduan ini menjelaskan langkah-langkah untuk membuat dan mengelola akun pengguna dengan peran QC Manager. Hak akses untuk melakukan proses pendaftaran akun ini hanya dimiliki oleh PERPI Admin.</p>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4 mt-8">1. Cara Membuat Akun QC Manager Baru</h4>
+                    <ul class="list-disc pl-5 space-y-3 mb-8">
+                      <li>Silakan login ke aplikasi QUALIFY menggunakan akun perpi_admin.</li>
+                      <li>Pada panel navigasi di sebelah kiri layar, klik menu User Management. Halaman ini akan menampilkan daftar seluruh pengguna yang sudah terdaftar di sistem.</li>
+                      <li>Untuk menambahkan pengguna baru, klik tombol Create User berwarna hijau yang berada di pojok kanan atas halaman.</li>
+                      <li>Pada kotak dialog Create User yang muncul, lengkapi formulir berikut:
+                        <ul class="list-[circle] pl-6 mt-2 space-y-2">
+                          <li>Name: Masukkan nama lengkap pengguna.</li>
+                          <li>Username: Masukkan username yang akan digunakan pengguna untuk login.</li>
+                          <li>Email: Masukkan alamat email aktif milik pengguna.</li>
+                          <li>Password: Buat kata sandi untuk pengguna tersebut (minimal 7 karakter).</li>
+                          <li>Confirm Password: Ketik ulang kata sandi yang sama untuk konfirmasi.</li>
+                          <li>Role: Klik menu dropdown dan pilih opsi QC Manager.</li>
+                          <li>Company: Pilih nama perusahaan tempat QC Manager tersebut bernaung sesuai dengan yang telah didaftarkan sebelumnya.</li>
+                        </ul>
+                      </li>
+                      <li>Setelah semua data dipastikan benar, klik tombol Submit. Jika proses berhasil, akan muncul notifikasi "User create successfully".</li>
+                    </ul>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4">2. Cara Mengedit Data dan Mengubah Status QC Manager</h4>
+                    <ul class="list-disc pl-5 space-y-3 mb-4">
+                      <li>Jika ada perubahan data atau karyawan yang resign, Anda dapat memperbarui profil atau menonaktifkan akun tersebut melalui menu User Management.</li>
+                      <li>Gunakan kolom pencarian (Search) di atas tabel untuk mencari username atau nama pengguna yang ingin diubah.</li>
+                      <li>Pada kolom Action di baris pengguna tersebut, klik ikon edit yang berwarna kuning (bergambar pensil).</li>
+                      <li>Kotak dialog Edit User akan terbuka. Di sini Anda dapat:
+                        <ul class="list-[circle] pl-6 mt-2 space-y-2">
+                          <li>Memperbaiki kesalahan penulisan nama pada kolom Name.</li>
+                          <li>Mengubah status akun dengan memilih opsi inactive pada menu dropdown Status (jika ingin menonaktifkan akun agar tidak bisa digunakan login lagi).</li>
+                        </ul>
+                      </li>
+                      <li class="bg-amber-100 p-4 rounded-lg text-amber-900 font-medium"><b>Penting:</b> Jika Anda tidak berniat mereset kata sandi pengguna, pastikan kolom New Password dan Confirm New Password dibiarkan kosong sebelum menyimpan.</li>
+                      <li>Klik tombol Submit untuk menyimpan perubahan. Jika status berhasil dinonaktifkan, label pada tabel akan berubah menjadi warna merah bertuliskan INACTIVE.</li>
+                    </ul>
+                  </div>
+               </div>
+
+               <div id="doc-v6" class="doc-user hidden animate-fade">
+                  <div class="bg-slate-50 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-inner prose prose-slate max-w-none text-slate-600 text-sm sm:text-[14px]">
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-6 border-b border-slate-100 pb-4">Panduan Menambah QC Officer Baru</h3>
+                    <p class="mb-6">Panduan ini menjelaskan langkah-langkah untuk menambahkan dan mengelola akun pengguna dengan peran QC Officer. Berbeda dengan penambahan peran manajerial yang dilakukan oleh admin pusat, proses pembuatan akun ini dilakukan langsung oleh QC Manager untuk anggota tim di perusahaannya masing-masing.</p>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4 mt-8">1. Cara Membuat Akun QC Officer Baru</h4>
+                    <ul class="list-disc pl-5 space-y-3 mb-8">
+                      <li>Silakan login ke aplikasi QUALIFY menggunakan akun QC Manager Anda.</li>
+                      <li>Setelah masuk ke Dashboard, pilih menu User Management pada panel navigasi di sebelah kiri. Halaman ini akan menampilkan daftar QC Officer yang sudah Anda buat sebelumnya.</li>
+                      <li>Klik tombol Create User berwarna hijau di bagian pojok kanan atas layar.</li>
+                      <li>Pada kotak dialog Create User yang muncul, lengkapi formulir pendaftaran berikut:
+                        <ul class="list-[circle] pl-6 mt-2 space-y-2">
+                          <li>Name: Masukkan nama pengguna.</li>
+                          <li>Username: Masukkan username yang akan digunakan untuk akses login.</li>
+                          <li>Email: Masukkan alamat email pengguna.</li>
+                          <li>Password & Confirm Password: Buat kata sandi baru (minimal 7 karakter) dan ketik ulang untuk konfirmasi.</li>
+                          <li>Role: Pilih opsi QC Officer (sebagai QC Manager, Anda hanya memiliki otorisasi untuk membuat akun dengan peran ini).</li>
+                        </ul>
+                      </li>
+                      <li>Klik tombol Submit untuk menyimpan data.</li>
+                    </ul>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4">2. Cara Mengedit Data dan Menonaktifkan Akun</h4>
+                    <ul class="list-disc pl-5 space-y-3">
+                      <li>Pada halaman User Management, gunakan fitur Search (kolom pencarian) di kanan atas tabel untuk mencari nama atau username dari akun yang ingin Anda kelola.</li>
+                      <li>Klik ikon edit berwarna kuning (bergambar pensil) pada kolom Action di baris pengguna tersebut.</li>
+                      <li>Pada kotak dialog Edit User, Anda dapat merubah nama pengguna di kolom Name atau mengubah Password jika diperlukan.</li>
+                      <li>Cara Menonaktifkan Akun: Jika staf tersebut sudah tidak bertugas, Anda dapat mencabut akses login-nya dengan cara mengubah Status pada menu dropdown paling bawah menjadi inactive.</li>
+                      <li>Klik tombol Submit untuk menerapkan perubahan. Akun yang berhasil dinonaktifkan akan ditandai dengan label INACTIVE berwarna merah pada tabel dan pengguna tersebut tidak akan bisa login kembali ke dalam sistem.</li>
+                    </ul>
+                  </div>
+               </div>
+
+               <div id="doc-v5" class="doc-user hidden animate-fade">
+                  <div class="bg-slate-50 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-inner prose prose-slate max-w-none text-slate-600 text-sm sm:text-[14px]">
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-6 border-b border-slate-100 pb-4">Panduan Menambah PERPI Officer Baru</h3>
+                    <p class="mb-6">Panduan ini menjelaskan langkah-langkah untuk membuat dan mengelola akun pengguna dengan peran PERPI Officer. Sama seperti penambahan QC Manager, hak akses untuk melakukan proses pendaftaran akun ini hanya dimiliki oleh pengguna dengan level PERPI Admin.</p>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4 mt-8">1. Cara Membuat Akun PERPI Officer Baru</h4>
+                    <ul class="list-disc pl-5 space-y-3 mb-8">
+                      <li>Silakan login ke aplikasi QUALIFY menggunakan akun perpi_admin.</li>
+                      <li>Pada panel navigasi di sebelah kiri layar, klik menu User Management.</li>
+                      <li>Klik tombol Create User berwarna hijau yang berada di pojok kanan atas halaman.</li>
+                      <li>Pada kotak dialog Create User yang muncul, lengkapi formulir pendaftaran:
+                        <ul class="list-[circle] pl-6 mt-2 space-y-2">
+                          <li>Name: Masukkan nama lengkap pengguna.</li>
+                          <li>Username: Masukkan username untuk login.</li>
+                          <li>Email: Masukkan alamat email aktif pengguna.</li>
+                          <li>Password & Confirm Password: Buat kata sandi untuk pengguna tersebut dan ketik ulang untuk konfirmasi.</li>
+                          <li>Role: Pastikan Anda memilih opsi PERPI Officer pada menu dropdown.</li>
+                          <li>Company: Berbeda dengan QC Manager yang harus memilih nama perusahaan spesifik, untuk PERPI Officer Anda dapat memilih opsi Total Company (agar memiliki akses tinjauan ke seluruh perusahaan).</li>
+                        </ul>
+                      </li>
+                      <li>Klik tombol Submit untuk menyimpan data. Notifikasi "User create successfully" akan muncul jika berhasil.</li>
+                    </ul>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4">2. Cara Mengedit Data PERPI Officer</h4>
+                    <ul class="list-disc pl-5 space-y-3 mb-8">
+                      <li>Pada menu User Management, gunakan kolom pencarian (Search) untuk mencari nama atau username PERPI Officer yang ingin diedit.</li>
+                      <li>Klik ikon edit berwarna kuning (bergambar pensil) pada kolom Action.</li>
+                      <li>Di kotak dialog Edit User, Anda dapat merubah Name, Username, atau mereset Password.</li>
+                      <li class="bg-amber-100 p-4 rounded-lg text-amber-900 font-medium"><b>Penting:</b> Jika Anda hanya ingin mengedit nama/username dan tidak ingin merubah kata sandi, pastikan kolom New Password dan Confirm New Password dalam keadaan kosong (hapus titik-titik kata sandi yang terisi otomatis oleh browser) agar data bisa disimpan.</li>
+                      <li>Klik Submit untuk memperbarui data.</li>
+                    </ul>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mb-4">3. Cara Menonaktifkan (Inactive) dan Mengaktifkan Kembali (Active) Akun</h4>
+                    <ul class="list-disc pl-5 space-y-3">
+                      <li>Jika pengurus tersebut sudah tidak bertugas, Anda dapat menonaktifkan akunnya. Pada kotak dialog Edit User, ubah Status pada menu dropdown paling bawah menjadi inactive.</li>
+                      <li>Klik Submit. Status pada tabel akan berubah menjadi label merah bertuliskan INACTIVE.</li>
+                      <li>Cara Mengaktifkan Kembali: Jika Anda ingin mengaktifkan akun itu lagi, klik ikon edit dan ubah status kembali menjadi active.</li>
+                      <li><b>Catatan Khusus saat Mengaktifkan Ulang:</b> Saat akun diubah menjadi inactive, sistem terkadang mengosongkan kolom Email. Oleh karena itu, sebelum menekan tombol Submit untuk mengaktifkan ulang, pastikan Anda mengetik kembali alamat email pengguna tersebut di kolom yang tersedia agar proses penyimpanan tidak error.</li>
+                    </ul>
+                  </div>
+               </div>
+            </div>
+
           </div>
         </div>
 
@@ -218,7 +505,7 @@
   </div>
 
   <script>
-    // MASUKKAN URL WEB APP GOOGLE SCRIPT BAPAK DI SINI (CONTOH FORMATNYA)
+    // MASUKKAN URL WEB APP GOOGLE SCRIPT BAPAK DI SINI
     const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbwXYZ1234567890abcdef/exec'; 
 
     document.addEventListener("DOMContentLoaded", () => { initAppEngine(); });
@@ -253,7 +540,6 @@
       }
     }
 
-    // FUNGSI NAVIGASI SISI KIRI (SIDEBAR UTAMA)
     function showPage(pageId) {
       const pages = ['about', 'quick', 'submit', 'user'];
       const titles = { 'about': 'Tentang Qualify', 'quick': 'Panduan Ringkas', 'submit': 'Submit Respondent', 'user': 'User Management' };
@@ -273,7 +559,6 @@
       if(window.innerWidth < 1024) closeMobileMenu();
     }
 
-    // FUNGSI NAVIGASI TAB BAGIAN ATAS (DINAMIS & RESPONSIVE)
     function switchSubVideo(section, videoId, btnElement, videoTitle) {
       const player = document.getElementById('player-' + section);
       const descText = document.getElementById('desc-' + section);
@@ -315,6 +600,12 @@
            btnElement.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-red-600 text-white shadow-md border border-red-600 tab-btn-" + section;
         }
       }
+
+      // Logic to switch the document text block
+      const docBlocks = document.querySelectorAll('.doc-' + section);
+      docBlocks.forEach(block => { block.classList.add('hidden'); block.classList.remove('block'); });
+      const targetDoc = document.getElementById('doc-' + videoId);
+      if(targetDoc) { targetDoc.classList.remove('hidden'); targetDoc.classList.add('block'); }
     }
 
     function renderAnalyticsChart(chartData) {
