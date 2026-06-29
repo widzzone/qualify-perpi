@@ -667,7 +667,7 @@
 
   <script>
     // MASUKKAN URL WEB APP GOOGLE SCRIPT BAPAK DI SINI
-    const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbwca38BDmBNhmZM4GkORs-VoM83dUyH6tqj_az0FrWFxqMD4WiB8l1l6E2gpkyCT2QD/exec'; 
+    const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbwXYZ1234567890abcdef/exec'; 
 
     document.addEventListener("DOMContentLoaded", () => { initAppEngine(); });
 
@@ -708,116 +708,14 @@
       }
     }
 
-    function switchVideo(videoId, btnElement, videoTitle) {
-      const player = document.getElementById('videoPlayer');
-      const loader = document.getElementById('iframe-loader');
-      const buttons = document.querySelectorAll('.video-tab-btn');
-      const docBlocks = document.querySelectorAll('.doc-block');
-      
-      const videoMap = {
-        'v1': 'https://drive.google.com/file/d/13Uw7fzDtt3r-Ztih6vbgf9FcUhNMUItj/preview',
-        'v2': 'https://drive.google.com/file/d/13bPzgLc94PBYj97u1j87837bQtWz5jOr/preview',
-        'v3': 'https://drive.google.com/file/d/13XDTBdq6qtZ2vuLekMNfAy1XDC4HFmPv/preview',
-        'v4': 'https://drive.google.com/file/d/13Y-2pNAi88A04igypQR37H_NtKngGxPC/preview',
-        'v5': 'https://drive.google.com/file/d/13anZ5AFTPuIMkCQ73i8Rc-1cE-PKQb6L/preview',
-        'v6': 'https://drive.google.com/file/d/13aOz0xBTVuwMKt3Pz4tDB2YDW_tCeRox/preview',
-        'v7': 'https://drive.google.com/file/d/13jF7nA9WGrEwGjhGMZ-r4Es-i5e02JXg/preview',
-        'v8': 'https://drive.google.com/file/d/13uEfp4OXWYVVBQ3gi6yORB1Br1AX_3sv/preview',
-        'v9': 'https://drive.google.com/file/d/1498tn4T2x0--qd68UPQKI2KwLjvUJ87_/preview'
-      };
-
-      // DESKRIPSI DINAMIS UNTUK SETIAP VIDEO
-      const videoDescMap = {
-        'v1': 'Video ini memberikan gambaran singkat mengenai alur kerja dan flowchart penggunaan aplikasi QUALIFY secara keseluruhan.',
-        'v2': 'Panduan mengenai tata cara masuk ke dalam sistem dan melakukan perubahan pada profil atau kata sandi Anda.',
-        'v3': 'Panduan khusus bagi <b>PERPI Admin</b> untuk mendaftarkan perusahaan atau member baru ke dalam sistem.',
-        'v4': 'Berikut ini panduan cara menambahkan user <b>QC Manager</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>PERPI Admin</b> saja.',
-        'v5': 'Berikut ini panduan cara menambahkan user <b>PERPI Officer</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>PERPI Admin</b> saja.',
-        'v6': 'Berikut ini panduan cara menambahkan user <b>QC Officer</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Manager</b> saja.',
-        'v7': 'Berikut ini panduan cara input single (satu) responden di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
-        'v8': 'Berikut ini panduan cara submit multiple responden di Qualify dengan menggunakan file excel, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
-        'v9': 'Penjelasan dan solusi untuk mengatasi berbagai kendala atau error yang sering muncul saat proses unggah file.'
-      };
-
-      if (loader) loader.style.display = 'flex';
-      if(player) player.src = videoMap[videoId];
-      
-      const titleDisplay = document.getElementById('video-title-display');
-      if (titleDisplay && videoTitle) titleDisplay.innerText = videoTitle;
-
-      // UPDATE TEKS DESKRIPSI DINAMIS
-      const descBox = document.getElementById('video-top-description');
-      const descText = document.getElementById('video-desc-text');
-      if (descBox && descText) {
-         if (videoDescMap[videoId]) {
-            descText.innerHTML = videoDescMap[videoId];
-            descBox.style.display = 'flex';
-         } else {
-            descBox.style.display = 'none';
-         }
-      }
-
-      buttons.forEach(btn => {
-        btn.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-700 border border-slate-200 video-tab-btn";
-        if(btn.innerText.includes('Error')) {
-           btn.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all bg-red-50 text-red-600 hover:bg-red-100 hover:text-red-700 border border-red-200 video-tab-btn";
-        }
-      });
-
-      if(btnElement) {
-        btnElement.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-blue-600 text-white shadow-md border border-blue-600 video-tab-btn";
-        if(btnElement.innerText.includes('Error')) {
-           btnElement.className = "flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-red-600 text-white shadow-md border border-red-600 video-tab-btn";
-        }
-      }
-
-      docBlocks.forEach(block => { block.classList.replace('block', 'hidden'); });
-      const targetDoc = document.getElementById('doc-' + videoId);
-      if(targetDoc) {
-          targetDoc.classList.replace('hidden', 'block');
-      }
-    }
-    function switchSubmitVideo(videoId, btnElement, videoTitle) {
-      const player = document.getElementById('submitVideoPlayer');
-      const buttons = document.querySelectorAll('.submit-tab-btn');
-      
-      const videoMap = {
-        'v7': 'https://drive.google.com/file/d/13jF7nA9WGrEwGjhGMZ-r4Es-i5e02JXg/preview',
-        'v8': 'https://drive.google.com/file/d/13uEfp4OXWYVVBQ3gi6yORB1Br1AX_3sv/preview',
-        'v9': 'https://drive.google.com/file/d/1498tn4T2x0--qd68UPQKI2KwLjvUJ87_/preview'
-      };
-
-      const descMap = {
-        'v7': 'Berikut ini panduan cara input single (satu) responden di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
-        'v8': 'Panduan cara mengunggah data puluhan hingga ratusan responden sekaligus menggunakan template Excel massal.',
-        'v9': 'Penjelasan dan solusi untuk mengatasi berbagai kendala atau error yang sering muncul saat proses unggah file.'
-      };
-
-      if(player) player.src = videoMap[videoId];
-      
-      const titleDisplay = document.getElementById('submit-video-title');
-      if (titleDisplay && videoTitle) titleDisplay.innerText = videoTitle;
-
-      const descText = document.getElementById('submit-desc-text');
-      if (descText) descText.innerHTML = descMap[videoId];
-
-      buttons.forEach(btn => {
-        btn.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 submit-tab-btn";
-      });
-
-      if(btnElement) {
-        btnElement.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-white bg-slate-800/50 border-l-[3px] border-blue-500 transition-colors submit-tab-btn font-medium";
-      }
-    }
-
+    // FUNGSI PINDAH HALAMAN SIDEBAR
     function showPage(pageId) {
-      // Menambahkan submit dan user ke dalam sistem navigasi
-      const pages = ['dashboard', 'tutorials', 'submit', 'user'];
+      const pages = ['about', 'quick', 'submit', 'user'];
       const titles = { 
-        'dashboard': 'Tentang Qualify', 
-        'tutorials': 'Panduan Ringkas',
-        'submit': 'Submit Respondent',
-        'user': 'User Management'
+        'about': 'Tentang Qualify', 
+        'quick': 'Panduan Ringkas', 
+        'submit': 'Submit Respondent', 
+        'user': 'User Management' 
       };
       
       const pageTitle = document.getElementById('page-title');
@@ -837,15 +735,74 @@
         }
       });
       
-      // Auto-close menu untuk versi Mobile HP
       if(window.innerWidth < 1024 && typeof closeMobileMenu === 'function') {
           closeMobileMenu();
       }
     }
+
+    // FUNGSI GANTI VIDEO: SUBMIT RESPONDENT
+    function switchSubmitVideo(videoId, btnElement, videoTitle) {
+      const player = document.getElementById('submitVideoPlayer');
+      const descText = document.getElementById('submit-desc-text');
+      const buttons = document.querySelectorAll('.submit-tab-btn');
       
-      // Auto-close menu on mobile after selection
-      if(window.innerWidth < 1024) {
-          closeMobileMenu();
+      const videoMap = {
+        'v7': 'https://drive.google.com/file/d/13jF7nA9WGrEwGjhGMZ-r4Es-i5e02JXg/preview',
+        'v8': 'https://drive.google.com/file/d/13uEfp4OXWYVVBQ3gi6yORB1Br1AX_3sv/preview',
+        'v9': 'https://drive.google.com/file/d/1498tn4T2x0--qd68UPQKI2KwLjvUJ87_/preview'
+      };
+
+      const descMap = {
+        'v7': 'Berikut ini panduan cara input single (satu) responden di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
+        'v8': 'Panduan cara mengunggah data puluhan hingga ratusan responden sekaligus menggunakan template Excel massal.',
+        'v9': 'Penjelasan dan solusi untuk mengatasi berbagai kendala atau error yang sering muncul saat proses unggah file.'
+      };
+
+      if(player) player.src = videoMap[videoId];
+      
+      const titleDisplay = document.getElementById('submit-video-title');
+      if (titleDisplay && videoTitle) titleDisplay.innerText = videoTitle;
+      if (descText) descText.innerHTML = descMap[videoId];
+
+      buttons.forEach(btn => {
+        btn.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 submit-tab-btn";
+      });
+
+      if(btnElement) {
+        btnElement.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-white bg-slate-800/50 border-l-[3px] border-blue-500 transition-colors submit-tab-btn font-medium";
+      }
+    }
+
+    // FUNGSI GANTI VIDEO: USER MANAGEMENT
+    function switchUserVideo(videoId, btnElement, videoTitle) {
+      const player = document.getElementById('userVideoPlayer');
+      const descText = document.getElementById('user-desc-text');
+      const buttons = document.querySelectorAll('.user-tab-btn');
+      
+      const videoMap = {
+        'v4': 'https://drive.google.com/file/d/13Y-2pNAi88A04igypQR37H_NtKngGxPC/preview',
+        'v6': 'https://drive.google.com/file/d/13aOz0xBTVuwMKt3Pz4tDB2YDW_tCeRox/preview',
+        'v5': 'https://drive.google.com/file/d/13anZ5AFTPuIMkCQ73i8Rc-1cE-PKQb6L/preview'
+      };
+
+      const descMap = {
+        'v4': 'Panduan bagi <b>PERPI Admin</b> untuk membuat dan mengelola akun dengan hak akses QC Manager.',
+        'v6': 'Panduan bagi <b>QC Manager</b> untuk membuat dan mengelola akun tim Quality Control (QC Officer) di perusahaannya.',
+        'v5': 'Panduan bagi <b>PERPI Admin</b> untuk mendaftarkan akun pengurus PERPI (PERPI Officer).'
+      };
+
+      if(player) player.src = videoMap[videoId];
+      
+      const titleDisplay = document.getElementById('user-video-title');
+      if (titleDisplay && videoTitle) titleDisplay.innerText = videoTitle;
+      if (descText) descText.innerHTML = descMap[videoId];
+
+      buttons.forEach(btn => {
+        btn.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 user-tab-btn";
+      });
+
+      if(btnElement) {
+        btnElement.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-white bg-slate-800/50 border-l-[3px] border-blue-500 transition-colors user-tab-btn font-medium";
       }
     }
 
@@ -940,25 +897,20 @@
       msgArea.scrollTop = msgArea.scrollHeight;
 
       try {
-        // KITA UBAH CARA PANGGILANNYA MENJADI GET (Super Aman dari CORS Google)
-        const fetchUrl = GAS_API_URL + '?action=chat&message=' + encodeURIComponent(msg);
-        const response = await fetch(fetchUrl);
-        
+        const response = await fetch(GAS_API_URL + '?action=chat&message=' + encodeURIComponent(msg));
         const responseText = await response.text();
         const loadingEl = document.getElementById(loadingId);
         if(loadingEl) loadingEl.remove();
-        
         appendMessage(responseText, 'bot');
       } catch (error) {
         const loadingEl = document.getElementById(loadingId);
         if(loadingEl) loadingEl.remove();
-        appendMessage('Maaf, terjadi kesalahan koneksi dengan server AI. Pastikan URL API sudah benar dan Anda sudah melakukan "New Deployment" di Google Script.', 'bot');
+        appendMessage('Maaf, terjadi kesalahan koneksi dengan server AI. Pastikan URL API sudah benar.', 'bot');
       }
     }
 
     function appendMessage(text, sender) {
       const msgArea = document.getElementById('chat-messages');
-      
       let formattedText = text
         .replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-800">$1</strong>')
         .replace(/\*(.*?)\*/g, '<em>$1</em>')
