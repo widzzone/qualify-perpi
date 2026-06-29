@@ -777,6 +777,38 @@
           targetDoc.classList.replace('hidden', 'block');
       }
     }
+    function switchSubmitVideo(videoId, btnElement, videoTitle) {
+      const player = document.getElementById('submitVideoPlayer');
+      const buttons = document.querySelectorAll('.submit-tab-btn');
+      
+      const videoMap = {
+        'v7': 'https://drive.google.com/file/d/13jF7nA9WGrEwGjhGMZ-r4Es-i5e02JXg/preview',
+        'v8': 'https://drive.google.com/file/d/13uEfp4OXWYVVBQ3gi6yORB1Br1AX_3sv/preview',
+        'v9': 'https://drive.google.com/file/d/1498tn4T2x0--qd68UPQKI2KwLjvUJ87_/preview'
+      };
+
+      const descMap = {
+        'v7': 'Berikut ini panduan cara input single (satu) responden di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
+        'v8': 'Panduan cara mengunggah data puluhan hingga ratusan responden sekaligus menggunakan template Excel massal.',
+        'v9': 'Penjelasan dan solusi untuk mengatasi berbagai kendala atau error yang sering muncul saat proses unggah file.'
+      };
+
+      if(player) player.src = videoMap[videoId];
+      
+      const titleDisplay = document.getElementById('submit-video-title');
+      if (titleDisplay && videoTitle) titleDisplay.innerText = videoTitle;
+
+      const descText = document.getElementById('submit-desc-text');
+      if (descText) descText.innerHTML = descMap[videoId];
+
+      buttons.forEach(btn => {
+        btn.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-slate-400 hover:bg-slate-800 hover:text-white transition-colors border-l-[3px] border-transparent hover:border-blue-500 submit-tab-btn";
+      });
+
+      if(btnElement) {
+        btnElement.className = "text-left w-full py-4 px-5 text-sm whitespace-normal text-white bg-slate-800/50 border-l-[3px] border-blue-500 transition-colors submit-tab-btn font-medium";
+      }
+    }
 
     function showPage(pageId) {
       // Menambahkan submit dan user ke dalam sistem navigasi
