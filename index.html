@@ -42,7 +42,7 @@
       <div class="w-14 h-14 border-4 border-blue-100 rounded-full"></div>
       <div class="w-14 h-14 border-4 border-blue-700 rounded-full border-t-transparent animate-spin absolute top-0 left-0"></div>
     </div>
-    <p class="mt-6 text-blue-900 font-bold tracking-widest text-xs uppercase animate-pulse">Memuat Data Qualify...</p>
+    <p class="mt-6 text-blue-900 font-bold tracking-widest text-xs uppercase animate-pulse">Memuat Qualify...</p>
   </div>
 
   <div id="mobile-overlay" onclick="closeMobileMenu()" class="fixed inset-0 bg-slate-900/50 z-[105] hidden lg:hidden transition-opacity opacity-0 duration-300"></div>
@@ -109,12 +109,12 @@
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm premium-card">
-              <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Total Responden Filtered</p>
+              <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Total Responden Tervalidasi</p>
               <h3 class="text-2xl font-extrabold text-slate-800" id="stat-respondent">...</h3>
               <p class="text-emerald-500 text-xs mt-2 font-medium flex items-center"><i class="fa fa-clock-rotate-left mr-1.5"></i> Data Historis 10 Tahun</p>
             </div>
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm premium-card">
-              <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Market Quality Growth</p>
+              <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Usage Growth (2023-2025)</p>
               <h3 class="text-2xl font-extrabold text-slate-800" id="stat-growth">...</h3>
               <p class="text-blue-500 text-xs mt-2 font-medium flex items-center"><i class="fa fa-bolt mr-1.5"></i> Multiple Submission Effect</p>
             </div>
@@ -148,7 +148,7 @@
             <div class="mt-10 pt-8 text-center overflow-hidden">
               <h3 class="font-bold text-slate-800 text-base sm:text-lg mb-6 uppercase tracking-wider">Matriks Otoritas Hak Akses Sistem</h3>
               <div class="rounded-2xl overflow-x-auto border border-slate-200 shadow-md">
-                <img src="https://www.image2url.com/r2/default/images/1782381789719-63f2fd05-fa26-47b7-9926-5243b9266fb4.png" alt="User Roles Matrix" class="w-full h-auto min-w-[600px]">
+                <img src="https://cdn.phototourl.com/free/2026-06-30-feaf6e47-f83a-4bd2-ac54-b9653d76b93d.jpg" alt="User Roles Matrix" class="w-full h-auto min-w-[600px]">
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center relative premium-card">
                   <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
                   <h5 class="font-bold text-slate-800 mb-2">Submit Single/Multiple Respondents</h5>
-                  <p class="text-xs sm:text-sm text-slate-500">Mengunggah data responden secara manual satu per satu atau massal menggunakan template.</p>
+                  <p class="text-xs sm:text-sm text-slate-500">Berikut ini panduan cara submit multiple responden di Qualify dengan menggunakan file excel, yang dapat melakukan proses ini hanya untuk roles QC Officer dan QC Manager saja.</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center relative premium-card mt-4 md:mt-0">
                   <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
@@ -380,7 +380,7 @@
 
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6 flex items-start max-w-4xl mx-auto">
                <i class="fa fa-info-circle mr-3 mt-1 text-blue-600 shrink-0"></i>
-               <span id="desc-user" class="text-sm text-slate-700 leading-relaxed font-medium">Panduan bagi <b>PERPI Admin</b> untuk membuat dan mengelola akun dengan hak akses QC Manager.</span>
+               <span id="desc-user" class="text-sm text-slate-700 leading-relaxed font-medium">Berikut ini panduan cara menambahkan user<b>QC Manager</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>PERPI Admin</b> saja.</span>
             </div>
 
             <div class="bg-slate-900 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl aspect-video relative flex items-center justify-center w-full max-w-4xl mx-auto mb-6">
@@ -594,11 +594,11 @@
 
       const descMap = {
         'v7': 'Berikut ini panduan cara input single (satu) responden di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
-        'v8': 'Panduan cara mengunggah data puluhan hingga ratusan responden sekaligus menggunakan template Excel massal.',
+        'v8': 'Berikut ini panduan cara submit multiple responden di Qualify dengan menggunakan file excel, yang dapat melakukan proses ini hanya untuk roles <b>QC Officer</b> dan <b>QC Manager</b> saja.',
         'v9': 'Penjelasan dan solusi untuk mengatasi berbagai kendala atau error yang sering muncul saat proses unggah file.',
-        'v4': 'Panduan bagi <b>PERPI Admin</b> untuk membuat dan mengelola akun dengan hak akses QC Manager.',
-        'v6': 'Panduan bagi <b>QC Manager</b> untuk membuat dan mengelola akun tim Quality Control (QC Officer) di perusahaannya.',
-        'v5': 'Panduan bagi <b>PERPI Admin</b> untuk mendaftarkan akun pengurus PERPI (PERPI Officer).'
+        'v4': 'Berikut ini panduan cara menambahkan user <b>QC Manager</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>PERPI Admin</b> saja.',
+        'v6': 'Berikut ini panduan cara menambahkan user <b>QC Officer</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>QC Manager</b> saja.',
+        'v5': 'Berikut ini panduan cara menambahkan user <b>PERPI Officer</b> di Qualify, yang dapat melakukan proses ini hanya untuk roles <b>PERPI Admin</b> saja.'
       };
 
       if(player) player.src = videoMap[videoId];
